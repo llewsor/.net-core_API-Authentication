@@ -1,0 +1,13 @@
+2025-06-27 03:01:40.935 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-06-27 03:01:41.442 +02:00 [DBG] Entity Framework Core 9.0.6 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:9.0.6' with options: EngineType=SqlServer 
+2025-06-27 03:01:42.138 +02:00 [DBG] 'DataContext' disposed.
+2025-06-27 03:02:10.673 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-06-27 03:02:11.246 +02:00 [DBG] Entity Framework Core 9.0.6 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:9.0.6' with options: EngineType=SqlServer 
+2025-06-27 03:02:11.370 +02:00 [DBG] Creating DbConnection.
+2025-06-27 03:02:11.411 +02:00 [DBG] Created DbConnection. (37ms).
+2025-06-27 03:02:11.415 +02:00 [DBG] Migrating using database '' on server ''.
+2025-06-27 03:02:11.418 +02:00 [DBG] Opening connection to database '' on server ''.
+2025-06-27 03:02:11.478 +02:00 [DBG] An error occurred using the connection to database '' on server ''.
+2025-06-27 03:02:11.482 +02:00 [DBG] 'DataContext' disposed.
+2025-06-27 03:02:11.485 +02:00 [DBG] Disposing connection to database '' on server ''.
+2025-06-27 03:02:11.492 +02:00 [DBG] Disposed connection to database '' on server '' (1ms).

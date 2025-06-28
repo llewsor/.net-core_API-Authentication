@@ -1,0 +1,28 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+
+# Build
+/bin/
+/obj/
+/artifacts/
+/TestResults/
+
+publish/
+images/
+
+# Rider
+.idea/
+
+AuthApi/bin/
+AuthApi/obj/
+AuthApi.IntegrationTests/bin/
+AuthApi.IntegrationTests/obj/
+AuthApi.DataTests/bin/
+AuthApi.DataTests/obj/
+AuthApi.UnitTests/bin/
+AuthApi.UnitTests/obj/

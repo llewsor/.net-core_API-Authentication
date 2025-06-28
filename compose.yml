@@ -1,0 +1,23 @@
+services:
+   api:
+    # build:
+    #   context: ./api
+    #   dockerfile: Dockerfile
+    # image: roswelldev/e-commerce-api:production
+    image: ecommerce-api:latest 
+    ports:
+      - "4030:5000" 
+    restart: unless-stopped
+    volumes:
+      - ./images:/app/images
+    networks:
+      - ecommerce-net
+#    depends_on:
+#      - pg
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__localPostgreSQL : "Host=pg;Port=5432;Database=e-commerce;Username=e-commerce;Password=database"
+
+networks:
+  ecommerce-net:
+    external: true
