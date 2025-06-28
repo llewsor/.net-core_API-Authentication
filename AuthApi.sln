@@ -5,13 +5,13 @@ VisualStudioVersion = 17.14.36221.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthApi", "AuthApi\AuthApi.csproj", "{AA974FA9-A4EB-442A-BDFB-49D31D4C7EF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthApi.UnitTests", "Tests\AuthApi.UnitTests.csproj", "{CF8D6E38-6866-4198-91F3-C1A7FBFDD8B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthApi.UnitTests", "AuthApi.UnitTests\AuthApi.UnitTests.csproj", "{CF8D6E38-6866-4198-91F3-C1A7FBFDD8B5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthApi.IntegrationTests", "AuthApi.IntegrationTests\AuthApi.IntegrationTests.csproj", "{AB4DEADC-04C8-40F5-8B9E-8BBCE9042B3D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthApi.DataTests", "DataTests\AuthApi.DataTests.csproj", "{DF69B1DC-F325-4B8E-B208-E094B2D6BC49}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthApi.DataTests", "AuthApi.DataTests\AuthApi.DataTests.csproj", "{DF69B1DC-F325-4B8E-B208-E094B2D6BC49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
