@@ -3,12 +3,12 @@ using AuthApi.Models;
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using System.Net;
 using System.Net.Http.Json;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace IntegrationTests
+namespace AuthApi.IntegrationTests
 {
     // IClassFixture ensures a single instance of AuthApiFactory is created for all tests in this class
     public class AuthControllerIntegrationTests : IClassFixture<AuthApiFactory>
@@ -207,7 +207,8 @@ namespace IntegrationTests
                 var adminUser = new User
                 {
                     Username = adminUserEmail,
-                    PasswordHash = BCrypt.Net.BCrypt.HashPassword(adminUserPassword),
+                    //TODO Implementation
+                    // PasswordHash = BCrypt.Net.BCrypt.HashPassword(adminUserPassword),
                     Role = "Admin"
                 };
                 await dbContext.Users.AddAsync(adminUser);

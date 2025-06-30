@@ -6,36 +6,29 @@ using AuthApi.Services.Interfaces;
 
 namespace AuthApi.Services.Implementations
 {
-    public class AuthService : IAuthService
+    public class AuthService(
+        IUserRepository userRepository,
+        ITokenHelper tokenHelper,
+        IRefreshTokenRepository refreshRepo)
+        : IAuthService
     {
-        private readonly IUserRepository _userRepository;
-        private readonly IRefreshTokenRepository _refreshRepo;
-        private readonly ITokenHelper _tokenHelper;
-
-        public AuthService(IUserRepository userRepository, ITokenHelper tokenHelper, IRefreshTokenRepository refreshRepo)
-        {
-            _userRepository = userRepository;
-            _tokenHelper = tokenHelper;
-            _refreshRepo = refreshRepo;
-        }
-
         public async Task<TokenDto> AuthenticateAsync(LoginDto dto, string ipAddress)
         {
-            User? user = await _userRepository.GetByUsernameAsync(dto.Username);
+            User? user = await userRepository.GetByUsernameAsync(dto.Username);
             if (user == null || !PasswordHelper.VerifyPasswordHash(dto.Password, user.PasswordHash, user.PasswordSalt))
                 throw new InvalidCredentialsException();
 
             if (user.IsBlocked)
                 throw new UserBlockedException();
 
-            var refreshToken = _tokenHelper.CreateRefreshToken(user.Id, ipAddress);
+            RefreshToken refreshToken = tokenHelper.CreateRefreshToken(user.Id, ipAddress);
 
-            await _refreshRepo.AddAsync(refreshToken);
-            await _refreshRepo.SaveChangesAsync();
+            await refreshRepo.AddAsync(refreshToken);
+            await refreshRepo.SaveChangesAsync();
 
             TokenDto token = new TokenDto()
             {
-                AccessToken = _tokenHelper.GenerateToken(user),
+                AccessToken = tokenHelper.CreateToken(user),
                 RefreshToken = refreshToken.Token
             };
 
@@ -44,6 +37,10 @@ namespace AuthApi.Services.Implementations
 
         public async Task RegisterAsync(UserDto dto)
         {
+            User? current = userRepository.GetByUsernameAsync(dto.Username).Result;
+            if (current != null)
+                throw new UsernameAlreadyTakenException();
+                
             PasswordHelper.CreatePasswordHash(dto.Password, out var hash, out var salt);
             var user = new User
             {
@@ -52,25 +49,25 @@ namespace AuthApi.Services.Implementations
                 PasswordSalt = salt
             };
 
-            await _userRepository.AddAsync(user);
-            await _userRepository.SaveChangesAsync();   
+            await userRepository.AddAsync(user);
+            await userRepository.SaveChangesAsync();   
         }
 
         public async Task<TokenDto> RefreshTokenAsync(string token, string ipAddress)
         {
-            RefreshToken? existingToken = await _refreshRepo.GetByTokenAsync(token);
+            RefreshToken? existingToken = await refreshRepo.GetByTokenAsync(token);
             if (existingToken == null || !existingToken.IsActive)
                 throw new RefreshTokenExpiredException();
 
             existingToken.Revoked = DateTime.UtcNow;
             existingToken.RevokedByIp = ipAddress;
 
-            RefreshToken newRefreshToken = _tokenHelper.CreateRefreshToken(existingToken.User.Id, ipAddress);
-            await _refreshRepo.AddAsync(newRefreshToken);
+            RefreshToken newRefreshToken = tokenHelper.CreateRefreshToken(existingToken.User.Id, ipAddress);
+            await refreshRepo.AddAsync(newRefreshToken);
 
-            await _refreshRepo.SaveChangesAsync();
+            await refreshRepo.SaveChangesAsync();
 
-            string newAccessToken = _tokenHelper.GenerateToken(existingToken.User);
+            string newAccessToken = tokenHelper.CreateToken(existingToken.User);
 
             return new TokenDto
             {

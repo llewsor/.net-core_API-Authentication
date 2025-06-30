@@ -11,8 +11,9 @@ using Microsoft.Extensions.Options;
 using Microsoft.VisualStudio.TestPlatform.TestHost;
 using System.Security.Claims;
 using System.Text.Encodings.Web;
+using AuthApi.Data;
 
-namespace Tests
+namespace AuthApi.UnitTests
 {
     public class AuthApiFactory : WebApplicationFactory<Program>
     {
@@ -54,7 +55,7 @@ namespace Tests
                 using (var scope = sp.CreateScope())
                 {
                     var scopedServices = scope.ServiceProvider;
-                    var db = scopedServices.GetRequiredService<DbContext>();
+                    var db = scopedServices.GetRequiredService<DataContext>();
                     var logger = scopedServices.GetRequiredService<ILogger<AuthApiFactory>>();
 
                     // Ensure the database is created.

@@ -11,7 +11,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestPlatform.TestHost;
 using System.Security.Claims;
 
-namespace IntegrationTests
+namespace AuthApi.IntegrationTests
 {
     public class AuthApiFactory : WebApplicationFactory<Program>
     {

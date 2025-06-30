@@ -4,7 +4,7 @@ namespace AuthApi.Helpers
 {
     public interface ITokenHelper
     {
-        string GenerateToken(User user);
+        string CreateToken(User user);
         RefreshToken CreateRefreshToken(int userId, string ip);
     }
 }

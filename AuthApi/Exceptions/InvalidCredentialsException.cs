@@ -1,8 +1,4 @@
 ﻿namespace AuthApi.Exceptions
 {
-    public class InvalidCredentialsException : Exception
-    {
-        public InvalidCredentialsException()
-          : base("Username or password is incorrect.") { }
-    }
+    public class InvalidCredentialsException() : Exception("Username or password is incorrect.");
 }

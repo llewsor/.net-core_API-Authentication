@@ -8,7 +8,7 @@ using Microsoft.VisualStudio.TestPlatform.TestHost;
 using System.Net;
 using System.Net.Http.Json;
 
-namespace Tests;
+namespace AuthApi.UnitTests;
 
 public class AuthApiIntegrationTests
     : IClassFixture<WebApplicationFactory<Program>>

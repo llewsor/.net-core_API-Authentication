@@ -8,27 +8,25 @@ using System.Text;
 
 namespace AuthApi.Helpers
 {
-    public class JTWTokenHelper : ITokenHelper
+    public class TokenHelper(IConfiguration configuration) : ITokenHelper
     {
-        private readonly IConfiguration _configuration;
-        public JTWTokenHelper(IConfiguration configuration) => _configuration = configuration;
-
-        public string GenerateToken(User user)
+        public string CreateToken(User user)
         {
             var claims = new[] {
                     new Claim(ClaimTypes.Name, user.Username),
                     new Claim(ClaimTypes.Role, user.Role)
                 };
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"]!));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
-
+            
             var token = new JwtSecurityToken(
-                issuer: _configuration["Jwt:Issuer"],
-                audience: _configuration["Jwt:Audience"],
+                issuer: configuration["Jwt:Issuer"],
+                audience: configuration["Jwt:Audience"],
                 claims: claims,
+                notBefore: DateTime.UtcNow,
                 expires: DateTime.UtcNow.AddMinutes(
-                    int.Parse(_configuration["Jwt:AccessTokenExpirationMinutes"]!)),
+                    int.Parse(configuration["Jwt:AccessTokenExpirationMinutes"]!)),
                 signingCredentials: creds);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
@@ -44,7 +42,7 @@ namespace AuthApi.Helpers
             {
                 Token = Convert.ToBase64String(randomBytes),
                 Expires = DateTime.UtcNow.AddDays(
-                    int.Parse(_configuration["Jwt:RefreshTokenExpirationDays"]!)),
+                    int.Parse(configuration["Jwt:RefreshTokenExpirationDays"]!)),
                 Created = DateTime.UtcNow,
                 UserId = userId
             };

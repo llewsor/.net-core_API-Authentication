@@ -16,7 +16,7 @@ namespace AuthApi.Extensions
             // Register services
             services.AddScoped<IAuthService, AuthService>();
             // Register token helper
-            services.AddSingleton<ITokenHelper, JTWTokenHelper>();
+            services.AddSingleton<ITokenHelper, TokenHelper>();
 
             return services;
         }

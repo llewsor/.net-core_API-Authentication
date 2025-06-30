@@ -7,13 +7,13 @@ using AuthApi.Services.Interfaces;
 using FluentAssertions;
 using Moq;
 
-namespace Tests;
+namespace AuthApi.UnitTests;
 public class AuthServiceTests
 {
-    protected readonly IAuthService _service;
-    protected readonly Mock<IUserRepository> _userRepo;
-    protected readonly Mock<IRefreshTokenRepository> _refreshRepo;
-    protected readonly Mock<ITokenHelper> _tokenHelper;
+    private readonly IAuthService _service;
+    private readonly Mock<IUserRepository> _userRepo;
+    private readonly Mock<IRefreshTokenRepository> _refreshRepo;
+    private readonly Mock<ITokenHelper> _tokenHelper;
 
     public AuthServiceTests()
     {
@@ -120,7 +120,7 @@ public class AuthServiceTests
           .Returns(new RefreshToken { Token = "r-token", User = user });
 
         _tokenHelper
-          .Setup(x => x.GenerateToken(user))
+          .Setup(x => x.CreateToken(user))
           .Returns("jwt-token");
 
         // Act
@@ -172,6 +172,21 @@ public class AuthServiceTests
                  && u.PasswordSalt.Length > 0)), Times.Once);
 
         _userRepo.Verify(x => x.SaveChangesAsync(), Times.Once);
+    }
+
+    [Fact]
+    public async Task RegisterAsync_WithAlreadyUsernameUsed_ShouldThrowAlreadyRegisteredException()
+    {
+        // Arrange
+        var dto = new UserDto() { Username = "alice", Password = "P@ssw0rd" };
+        
+        GivenLoginDto(dto.Username, dto.Password, out var user);
+
+        // Act
+        Func<Task> act = () => _service.RegisterAsync(dto);
+
+        // Assert
+        await act.Should().ThrowAsync<UsernameAlreadyTakenException>();
     }
 
     // -------------------------
@@ -233,7 +248,7 @@ public class AuthServiceTests
 
         _tokenHelper.Setup(t => t.CreateRefreshToken(user.Id, ip))
                     .Returns(newRefreshToken);
-        _tokenHelper.Setup(t => t.GenerateToken(user))
+        _tokenHelper.Setup(t => t.CreateToken(user))
                     .Returns("new-at");
 
         // Act

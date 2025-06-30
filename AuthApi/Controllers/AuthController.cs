@@ -19,12 +19,12 @@ namespace AuthApi.Controllers
         }
 
         [HttpPost("register")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Register(UserDto dto)
         {
             await _authService.RegisterAsync(dto);
-            return Ok(new { message = "Registered" });
+            return Created();
         }
 
         [HttpPost("login")]
@@ -34,10 +34,6 @@ namespace AuthApi.Controllers
         {
             var ip = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "Unknown";
             TokenDto token = await _authService.AuthenticateAsync(dto, ip);
-
-            if (token == null)
-                return Unauthorized(new { error = "Invalid credentials" });
-
             return Ok(token);
         }
 
@@ -53,7 +49,7 @@ namespace AuthApi.Controllers
 
         [Authorize]
         [HttpGet("secret")]
-        public ActionResult<string> GetSecret() => "You are authorized!";
+        public ActionResult<string> GetSecret() => Ok("You are authorized!");
 
         [Authorize(Roles = "Admin")]
         [HttpGet("admin-data")]
