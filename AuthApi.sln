@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{02EA681E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthApi.DataTests", "AuthApi.DataTests\AuthApi.DataTests.csproj", "{DF69B1DC-F325-4B8E-B208-E094B2D6BC49}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthApi.InMemoryIntegrationTests", "AuthApi.InMemoryIntegrationTests\AuthApi.InMemoryIntegrationTests.csproj", "{9A9F0B37-B0B8-4C33-8986-DA3E1BBF4874}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{DF69B1DC-F325-4B8E-B208-E094B2D6BC49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF69B1DC-F325-4B8E-B208-E094B2D6BC49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF69B1DC-F325-4B8E-B208-E094B2D6BC49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A9F0B37-B0B8-4C33-8986-DA3E1BBF4874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A9F0B37-B0B8-4C33-8986-DA3E1BBF4874}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A9F0B37-B0B8-4C33-8986-DA3E1BBF4874}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A9F0B37-B0B8-4C33-8986-DA3E1BBF4874}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +49,7 @@ Global
 		{CF8D6E38-6866-4198-91F3-C1A7FBFDD8B5} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{AB4DEADC-04C8-40F5-8B9E-8BBCE9042B3D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{DF69B1DC-F325-4B8E-B208-E094B2D6BC49} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{9A9F0B37-B0B8-4C33-8986-DA3E1BBF4874} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {72AC3552-B974-4A87-8722-9160FBEDEEFF}

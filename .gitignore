@@ -26,3 +26,5 @@ AuthApi.DataTests/bin/
 AuthApi.DataTests/obj/
 AuthApi.UnitTests/bin/
 AuthApi.UnitTests/obj/
+AuthApi.InMemoryIntegrationTests/bin/
+AuthApi.InMemoryIntegrationTests/obj/

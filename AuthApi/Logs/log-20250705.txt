@@ -1,0 +1,261 @@
+2025-07-05 22:30:39.047 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-07-05 22:30:39.729 +02:00 [DBG] Hosting starting
+2025-07-05 22:30:39.890 +02:00 [INF] User profile is available. Using 'C:\Users\roswe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-07-05 22:30:40.015 +02:00 [DBG] Reading data from file 'C:\Users\roswe\AppData\Local\ASP.NET\DataProtection-Keys\key-73041f8c-a61f-4811-8fa3-a792c5f82e10.xml'.
+2025-07-05 22:30:40.112 +02:00 [DBG] Reading data from file 'C:\Users\roswe\AppData\Local\ASP.NET\DataProtection-Keys\key-adc15277-1c96-4eca-989b-83e26291598e.xml'.
+2025-07-05 22:30:40.199 +02:00 [DBG] Found key {73041f8c-a61f-4811-8fa3-a792c5f82e10}.
+2025-07-05 22:30:40.273 +02:00 [DBG] Found key {adc15277-1c96-4eca-989b-83e26291598e}.
+2025-07-05 22:30:40.293 +02:00 [DBG] Considering key {adc15277-1c96-4eca-989b-83e26291598e} with expiration date 2025-07-19 12:16:03Z as default key.
+2025-07-05 22:30:40.315 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-07-05 22:30:40.321 +02:00 [DBG] Decrypting secret element using Windows DPAPI.
+2025-07-05 22:30:40.330 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-07-05 22:30:40.341 +02:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2025-07-05 22:30:40.345 +02:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2025-07-05 22:30:40.353 +02:00 [DBG] Using key {adc15277-1c96-4eca-989b-83e26291598e} as the default key.
+2025-07-05 22:30:40.362 +02:00 [DBG] Key ring with default key {adc15277-1c96-4eca-989b-83e26291598e} was loaded during application startup.
+2025-07-05 22:30:40.372 +02:00 [DBG] Middleware loaded
+2025-07-05 22:30:40.376 +02:00 [DBG] Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (16499 B).
+2025-07-05 22:30:40.381 +02:00 [DBG] Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+2025-07-05 22:30:40.484 +02:00 [DBG] Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True}
+2025-07-05 22:30:40.552 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-07-05 22:30:40.614 +02:00 [DBG] Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+2025-07-05 22:30:40.759 +02:00 [INF] Now listening on: https://localhost:7010
+2025-07-05 22:30:40.769 +02:00 [INF] Now listening on: http://localhost:5184
+2025-07-05 22:30:40.775 +02:00 [DBG] Loaded hosting startup assembly AuthApi
+2025-07-05 22:30:40.819 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-07-05 22:30:40.944 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-07-05 22:30:41.025 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-07-05 22:30:41.099 +02:00 [DBG] Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-07-05 22:30:41.232 +02:00 [DBG] Executing API description provider 'DefaultApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-07-05 22:30:41.364 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-05 22:30:41.442 +02:00 [INF] Hosting environment: Development
+2025-07-05 22:30:41.522 +02:00 [INF] Content root path: C:\Projects\.net-core_API-Authentication\AuthApi
+2025-07-05 22:30:41.536 +02:00 [DBG] Hosting started
+2025-07-05 22:30:55.246 +02:00 [DBG] Connection id "0HNDS0BBSACEQ" received FIN.
+2025-07-05 22:30:55.264 +02:00 [DBG] Connection id "0HNDS0BBSACEQ" accepted.
+2025-07-05 22:30:55.270 +02:00 [DBG] Connection id "0HNDS0BBSACEQ" started.
+2025-07-05 22:30:55.271 +02:00 [DBG] Connection id "0HNDS0BBSACER" accepted.
+2025-07-05 22:30:55.275 +02:00 [DBG] Connection id "0HNDS0BBSACER" started.
+2025-07-05 22:30:55.299 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-07-05 22:30:55.312 +02:00 [DBG] Connection id "0HNDS0BBSACEQ" stopped.
+2025-07-05 22:30:55.316 +02:00 [DBG] Connection id "0HNDS0BBSACEQ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-05 22:30:55.331 +02:00 [DBG] Connection 0HNDS0BBSACER established using the following protocol: "Tls13"
+2025-07-05 22:30:55.376 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7010/api/Auth/register - application/json 53
+2025-07-05 22:30:55.417 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Auth/register'
+2025-07-05 22:30:55.431 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.Register (AuthApi)' with route pattern 'api/Auth/register' is valid for the request path '/api/Auth/register'
+2025-07-05 22:30:55.438 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.Register (AuthApi)'
+2025-07-05 22:30:55.459 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-05 22:30:55.659 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '28/06/2025 10:28:44', Current time (UTC): '05/07/2025 20:30:55'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-07-05 22:30:55.675 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '28/06/2025 10:28:44', Current time (UTC): '05/07/2025 20:30:55'.
+2025-07-05 22:30:55.693 +02:00 [INF] Executing endpoint 'AuthApi.Controllers.AuthController.Register (AuthApi)'
+2025-07-05 22:30:55.720 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(AuthApi.Models.UserDto) on controller AuthApi.Controllers.AuthController (AuthApi).
+2025-07-05 22:30:55.731 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-05 22:30:55.744 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-05 22:30:55.750 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-05 22:30:55.783 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-05 22:30:55.814 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-05 22:30:55.823 +02:00 [DBG] Executing controller factory for controller AuthApi.Controllers.AuthController (AuthApi)
+2025-07-05 22:30:56.020 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-07-05 22:30:56.049 +02:00 [DBG] Executed controller factory for controller AuthApi.Controllers.AuthController (AuthApi)
+2025-07-05 22:30:56.065 +02:00 [DBG] Attempting to bind parameter 'dto' of type 'AuthApi.Models.UserDto' ...
+2025-07-05 22:30:56.070 +02:00 [DBG] Attempting to bind parameter 'dto' of type 'AuthApi.Models.UserDto' using the name '' in request data ...
+2025-07-05 22:30:56.075 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-07-05 22:30:56.094 +02:00 [DBG] Connection id "0HNDS0BBSACER", Request id "0HNDS0BBSACER:00000001": started reading request body.
+2025-07-05 22:30:56.098 +02:00 [DBG] Connection id "0HNDS0BBSACER", Request id "0HNDS0BBSACER:00000001": done reading request body.
+2025-07-05 22:30:56.112 +02:00 [DBG] JSON input formatter succeeded, deserializing to type 'AuthApi.Models.UserDto'
+2025-07-05 22:30:56.115 +02:00 [DBG] Done attempting to bind parameter 'dto' of type 'AuthApi.Models.UserDto'.
+2025-07-05 22:30:56.118 +02:00 [DBG] Done attempting to bind parameter 'dto' of type 'AuthApi.Models.UserDto'.
+2025-07-05 22:30:56.121 +02:00 [DBG] Attempting to validate the bound parameter 'dto' of type 'AuthApi.Models.UserDto' ...
+2025-07-05 22:30:56.134 +02:00 [DBG] Done attempting to validate the bound parameter 'dto' of type 'AuthApi.Models.UserDto'.
+2025-07-05 22:30:56.967 +02:00 [DBG] Entity Framework Core 9.0.6 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:9.0.6' with options: EngineType=SqlServer 
+2025-07-05 22:30:57.048 +02:00 [DBG] Compiling query expression: 
+'DbSet<User>()
+    .SingleOrDefault(u => u.Username == __username_0)'
+2025-07-05 22:30:57.339 +02:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<User>(
+    asyncEnumerable: SingleQueryingEnumerable.Create<User>(
+        relationalQueryContext: (RelationalQueryContext)queryContext, 
+        relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.IsBlocked (bool) Required ValueGenerated.OnAdd, 1], [Property: User.PasswordHash (byte[]) Required, 2], [Property: User.PasswordSalt (byte[]) Required, 3], [Property: User.Role (string) Required, 4], [Property: User.Username (string) Required Index MaxLength(50), 5] }
+            SELECT TOP(2) u.Id, u.IsBlocked, u.PasswordHash, u.PasswordSalt, u.Role, u.Username
+            FROM Users AS u
+            WHERE u.Username == @__username_0) | Resolver: c => new RelationalCommandCache(
+            c.Dependencies.MemoryCache, 
+            c.RelationalDependencies.QuerySqlGeneratorFactory, 
+            c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.IsBlocked (bool) Required ValueGenerated.OnAdd, 1], [Property: User.PasswordHash (byte[]) Required, 2], [Property: User.PasswordSalt (byte[]) Required, 3], [Property: User.Role (string) Required, 4], [Property: User.Username (string) Required Index MaxLength(50), 5] }
+            SELECT TOP(2) u.Id, u.IsBlocked, u.PasswordHash, u.PasswordSalt, u.Role, u.Username
+            FROM Users AS u
+            WHERE u.Username == @__username_0, 
+            False, 
+            new HashSet<string>(
+                new string[]{ }, 
+                StringComparer.Ordinal
+            )
+        )].GetRelationalCommandTemplate(parameters), 
+        readerColumns: [LIFTABLE Constant: ReaderColumn[] { ReaderColumn<int>, ReaderColumn<bool>, ReaderColumn<object>, ReaderColumn<object>, ReaderColumn<object>, ReaderColumn<object> } | Resolver: namelessParameter{0} => new ReaderColumn[]
+        { 
+            new ReaderColumn<int>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("Id"), 
+                (dataReader, indexMap) => dataReader.GetInt32(0)
+            ), 
+            new ReaderColumn<bool>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("IsBlocked"), 
+                (dataReader, indexMap) => dataReader.GetBoolean(1)
+            ), 
+            new ReaderColumn<object>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("PasswordHash"), 
+                (dataReader, indexMap) => (object)dataReader.GetFieldValue<byte[]>(2)
+            ), 
+            new ReaderColumn<object>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("PasswordSalt"), 
+                (dataReader, indexMap) => (object)dataReader.GetFieldValue<byte[]>(3)
+            ), 
+            new ReaderColumn<object>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("Role"), 
+                (dataReader, indexMap) => (object)dataReader.GetString(4)
+            ), 
+            new ReaderColumn<object>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("Username"), 
+                (dataReader, indexMap) => (object)dataReader.GetString(5)
+            ) 
+        }], 
+        shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+        {
+            User entity;
+            entity = 
+            {
+                MaterializationContext materializationContext1;
+                IEntityType entityType1;
+                User instance1;
+                InternalEntityEntry entry1;
+                bool hasNullKey1;
+                materializationContext1 = new MaterializationContext(
+                    [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                    queryContext.Context
+                );
+                instance1 = default(User);
+                entry1 = queryContext.TryGetEntry(
+                    key: [LIFTABLE Constant: Key: User.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindPrimaryKey()], 
+                    keyValues: new object[]{ (object)dataReader.GetInt32(0) }, 
+                    throwOnNullKey: True, 
+                    hasNullKey: hasNullKey1);
+                !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+                {
+                    entityType1 = entry1.EntityType;
+                    return instance1 = (User)entry1.Entity;
+                } : 
+                {
+                    ISnapshot shadowSnapshot1;
+                    shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                    entityType1 = [LIFTABLE Constant: EntityType: User | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("AuthApi.Models.User")];
+                    instance1 = switch (entityType1)
+                    {
+                        case [LIFTABLE Constant: EntityType: User | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("AuthApi.Models.User")]: 
+                            {
+                                return 
+                                {
+                                    User instance;
+                                    instance = new User();
+                                    instance.<Id>k__BackingField = dataReader.GetInt32(0);
+                                    instance.<IsBlocked>k__BackingField = dataReader.GetBoolean(1);
+                                    instance.<PasswordHash>k__BackingField = (byte[])dataReader.GetFieldValue<object>(2);
+                                    instance.<PasswordSalt>k__BackingField = (byte[])dataReader.GetFieldValue<object>(3);
+                                    instance.<Role>k__BackingField = (string)dataReader.GetFieldValue<object>(4);
+                                    instance.<Username>k__BackingField = (string)dataReader.GetFieldValue<object>(5);
+                                    (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                        context: materializationContext1.Context, 
+                                        entity: instance, 
+                                        queryTrackingBehavior: TrackAll, 
+                                        structuralType: [LIFTABLE Constant: EntityType: User | Resolver: namelessParameter{3} => namelessParameter{3}.Dependencies.Model.FindEntityType("AuthApi.Models.User")]) : default(void);
+                                    return instance;
+                                }}
+                        default: 
+                            default(User)
+                    }
+                    ;
+                    entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                        entityType: entityType1, 
+                        entity: instance1, 
+                        snapshot: shadowSnapshot1);
+                    return instance1;
+                } : default(void);
+                return instance1;
+            };
+            return entity;
+        }, 
+        contextType: AuthApi.Data.DataContext, 
+        standAloneStateManager: False, 
+        detailedErrorsEnabled: False, 
+        threadSafetyChecksEnabled: True), 
+    cancellationToken: queryContext.CancellationToken)'
+2025-07-05 22:30:57.429 +02:00 [DBG] Creating DbConnection.
+2025-07-05 22:30:57.457 +02:00 [DBG] Created DbConnection. (26ms).
+2025-07-05 22:30:57.474 +02:00 [DBG] Opening connection to database 'AuthDb' on server 'machine'.
+2025-07-05 22:30:57.991 +02:00 [DBG] Opened connection to database 'AuthDb' on server 'machine'.
+2025-07-05 22:30:58.164 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-07-05 22:30:58.179 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (11ms).
+2025-07-05 22:30:58.210 +02:00 [DBG] Initialized DbCommand for 'ExecuteReader' (47ms).
+2025-07-05 22:30:58.230 +02:00 [DBG] Executing DbCommand [Parameters=[@__username_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[IsBlocked], [u].[PasswordHash], [u].[PasswordSalt], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2025-07-05 22:30:58.374 +02:00 [INF] Executed DbCommand (142ms) [Parameters=[@__username_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[IsBlocked], [u].[PasswordHash], [u].[PasswordSalt], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2025-07-05 22:30:58.469 +02:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-05 22:30:58.505 +02:00 [DBG] Closing data reader to 'AuthDb' on server 'machine'.
+2025-07-05 22:30:58.517 +02:00 [DBG] A data reader for 'AuthDb' on server 'machine' is being disposed after spending 86ms reading results.
+2025-07-05 22:30:58.524 +02:00 [DBG] Closing connection to database 'AuthDb' on server 'machine'.
+2025-07-05 22:30:58.543 +02:00 [DBG] Closed connection to database 'AuthDb' on server 'machine' (19ms).
+2025-07-05 22:31:02.391 +02:00 [INF] Executed action AuthApi.Controllers.AuthController.Register (AuthApi) in 6566.0345ms
+2025-07-05 22:31:02.408 +02:00 [INF] Executed endpoint 'AuthApi.Controllers.AuthController.Register (AuthApi)'
+2025-07-05 22:31:02.463 +02:00 [WRN] Username already in use /api/Auth/register
+AuthApi.Exceptions.UsernameInUseException: Username already in use.
+   at AuthApi.Services.Implementations.AuthService.RegisterAsync(UserDto dto) in C:\Projects\.net-core_API-Authentication\AuthApi\Services\Implementations\AuthService.cs:line 42
+   at AuthApi.Controllers.AuthController.Register(UserDto dto) in C:\Projects\.net-core_API-Authentication\AuthApi\Controllers\AuthController.cs:line 26
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AuthApi.Middlewares.ExceptionLoggingMiddleware.InvokeAsync(HttpContext context) in C:\Projects\.net-core_API-Authentication\AuthApi\Middlewares\ExceptionLoggingMiddleware.cs:line 21
+2025-07-05 22:31:02.558 +02:00 [INF] HTTP POST /api/Auth/register responded 400 in 7092.9116 ms
+2025-07-05 22:31:02.565 +02:00 [DBG] Connection id "0HNDS0BBSACER" completed keep alive response.
+2025-07-05 22:31:02.576 +02:00 [DBG] 'DataContext' disposed.
+2025-07-05 22:31:02.595 +02:00 [DBG] Disposing connection to database 'AuthDb' on server 'machine'.
+2025-07-05 22:31:02.615 +02:00 [DBG] Disposed connection to database '' on server '' (23ms).
+2025-07-05 22:31:02.625 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7010/api/Auth/register - 400 null application/json; charset=utf-8 7254.9451ms

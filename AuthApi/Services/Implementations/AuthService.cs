@@ -39,8 +39,8 @@ namespace AuthApi.Services.Implementations
         {
             User? current = userRepository.GetByUsernameAsync(dto.Username).Result;
             if (current != null)
-                throw new UsernameAlreadyTakenException();
-                
+                throw new UsernameInUseException();
+
             PasswordHelper.CreatePasswordHash(dto.Password, out var hash, out var salt);
             var user = new User
             {
@@ -50,7 +50,7 @@ namespace AuthApi.Services.Implementations
             };
 
             await userRepository.AddAsync(user);
-            await userRepository.SaveChangesAsync();   
+            await userRepository.SaveChangesAsync();
         }
 
         public async Task<TokenDto> RefreshTokenAsync(string token, string ipAddress)

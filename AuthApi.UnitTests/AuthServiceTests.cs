@@ -15,6 +15,8 @@ public class AuthServiceTests
     private readonly Mock<IRefreshTokenRepository> _refreshRepo;
     private readonly Mock<ITokenHelper> _tokenHelper;
 
+    private readonly string _ipAddress = "1.2.3.4";
+
     public AuthServiceTests()
     {
         _userRepo = new Mock<IUserRepository>();
@@ -66,7 +68,7 @@ public class AuthServiceTests
                  .ReturnsAsync((User?)null);
 
         // Act
-        Func<Task> act = () => _service.AuthenticateAsync(dto, "1.2.3.4");
+        Func<Task> act = () => _service.AuthenticateAsync(dto, _ipAddress);
 
         // Assert
         await act.Should().ThrowAsync<InvalidCredentialsException>();
@@ -76,12 +78,12 @@ public class AuthServiceTests
     public async Task AuthenticateAsync_WithIncorrectPassword_ShouldThrowInvalidCredentialsException()
     {
         // Arrange
-        var dto = GivenLoginDto("alice", "P@ssw0rd", out var user);
+        var dto = GivenLoginDto("alice", "P@ssw0rd", out var _);
 
         dto.Password = "wrongpwd"; // Simulate wrong password
 
         // Act
-        Func<Task> act = () => _service.AuthenticateAsync(dto, "1.2.3.4");
+        Func<Task> act = () => _service.AuthenticateAsync(dto, _ipAddress);
 
         // Assert
         await act.Should().ThrowAsync<InvalidCredentialsException>();
@@ -100,7 +102,7 @@ public class AuthServiceTests
           .ReturnsAsync(user);
 
         // Act
-        Func<Task> act = () => _service.AuthenticateAsync(dto, "1.2.3.4");
+        Func<Task> act = () => _service.AuthenticateAsync(dto, _ipAddress);
 
         // Assert
         await act.Should().ThrowAsync<UserBlockedException>();
@@ -116,7 +118,7 @@ public class AuthServiceTests
         var dto = GivenLoginDto(username, password, out var user);
 
         _tokenHelper
-          .Setup(x => x.CreateRefreshToken(user.Id, "1.2.3.4"))
+          .Setup(x => x.CreateRefreshToken(user.Id, _ipAddress))
           .Returns(new RefreshToken { Token = "r-token", User = user });
 
         _tokenHelper
@@ -124,7 +126,7 @@ public class AuthServiceTests
           .Returns("jwt-token");
 
         // Act
-        var result = await _service.AuthenticateAsync(dto, "1.2.3.4");
+        var result = await _service.AuthenticateAsync(dto, _ipAddress);
 
         // Assert
         result.AccessToken.Should().Be("jwt-token");
@@ -152,8 +154,6 @@ public class AuthServiceTests
             Password = password
         };
 
-        var user = CreateTestUser(dto.Username, dto.Password);
-
         _userRepo
           .Setup(x => x.AddAsync(It.IsAny<User>()))
           .Returns(Task.CompletedTask);
@@ -179,14 +179,14 @@ public class AuthServiceTests
     {
         // Arrange
         var dto = new UserDto() { Username = "alice", Password = "P@ssw0rd" };
-        
-        GivenLoginDto(dto.Username, dto.Password, out var user);
+
+        GivenLoginDto(dto.Username, dto.Password, out var _);
 
         // Act
         Func<Task> act = () => _service.RegisterAsync(dto);
 
         // Assert
-        await act.Should().ThrowAsync<UsernameAlreadyTakenException>();
+        await act.Should().ThrowAsync<UsernameInUseException>();
     }
 
     // -------------------------
@@ -204,7 +204,7 @@ public class AuthServiceTests
 
         // Act & Assert
         await Assert.ThrowsAsync<RefreshTokenExpiredException>(() =>
-            _service.RefreshTokenAsync(refreshToken, "ip"));
+            _service.RefreshTokenAsync(refreshToken, _ipAddress));
 
         // Verify that the repository was called
         _refreshRepo.Verify(x => x.GetByTokenAsync(refreshToken), Times.Once);
@@ -220,7 +220,7 @@ public class AuthServiceTests
 
         // Act & Assert
         await Assert.ThrowsAsync<RefreshTokenExpiredException>(() =>
-            _service.RefreshTokenAsync("old", "ip"));
+            _service.RefreshTokenAsync("old", _ipAddress));
 
         // Verify that the repository was called
         _refreshRepo.Verify(x => x.GetByTokenAsync(expiredToken.Token), Times.Once);
@@ -230,36 +230,37 @@ public class AuthServiceTests
     public async Task RefreshTokenAsync_WithValidActiveToken_ShouldRevokeOldTokenAndReturnNewTokenDto()
     {
         // Arrange
-        User user = new User { Id = 42, Username = "carl" };
-
-        RefreshToken oldRefreshToken = new RefreshToken
+        var user = new User { Id = 42, Username = "carl" };
+        var before = DateTime.UtcNow;
+        var oldRefreshToken = new RefreshToken
         {
             User = user,
             Token = "good",
-            Expires = DateTime.UtcNow.AddMinutes(5),
+            Expires = before.AddMinutes(5),
         };
-
-        string ip = "1.2.3.4";
 
         _refreshRepo.Setup(r => r.GetByTokenAsync(oldRefreshToken.Token))
                     .ReturnsAsync(oldRefreshToken);
 
         var newRefreshToken = new RefreshToken { Token = "new-rt" };
+        const string tk = "new-at";
 
-        _tokenHelper.Setup(t => t.CreateRefreshToken(user.Id, ip))
+        _tokenHelper.Setup(t => t.CreateRefreshToken(user.Id, _ipAddress))
                     .Returns(newRefreshToken);
         _tokenHelper.Setup(t => t.CreateToken(user))
-                    .Returns("new-at");
+                    .Returns(tk);
 
         // Act
-        var dto = await _service.RefreshTokenAsync(oldRefreshToken.Token, ip);
+        var dto = await _service.RefreshTokenAsync(oldRefreshToken.Token, _ipAddress);
 
         // Assert
-        dto.AccessToken.Should().Be("new-at");
-        dto.RefreshToken.Should().Be("new-rt");
+        dto.AccessToken.Should().Be(tk);
+        dto.RefreshToken.Should().Be(newRefreshToken.Token);
+
+        Assert.True(oldRefreshToken.Revoked >= before && oldRefreshToken.Revoked <= DateTime.UtcNow);
 
         oldRefreshToken.Revoked.Should().BeCloseTo(DateTime.UtcNow, precision: TimeSpan.FromSeconds(1));
-        oldRefreshToken.RevokedByIp.Should().Be("1.2.3.4");
+        oldRefreshToken.RevokedByIp.Should().Be(_ipAddress);
 
         _refreshRepo.Verify(r => r.GetByTokenAsync(oldRefreshToken.Token), Times.Once);
         _refreshRepo.Verify(r => r.AddAsync(newRefreshToken), Times.Once);

@@ -5,10 +5,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AuthApi.Repositories.Implementations
 {
-    public class UserRepository : IUserRepository
+    public class UserRepository(DataContext context) : IUserRepository
     {
-        private readonly IDataContext _context;
-        public UserRepository(DataContext context) => _context = context;
+        private readonly IDataContext _context = context;
 
         public async Task AddAsync(User user)=>
             await _context.Users.AddAsync(user);

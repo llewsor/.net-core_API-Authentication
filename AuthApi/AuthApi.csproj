@@ -1,18 +1,22 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
 
-
-	<!-- Allows deps.json to be produced & copied -->
-	<PreserveCompilationContext>true</PreserveCompilationContext>
-	<!-- Ensures all assemblies (and the .deps.json) are copied locally -->
-	<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <!-- Allows deps.json to be produced & copied -->
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <!-- Ensures all assemblies (and the .deps.json) are copied locally -->
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
 
   <ItemGroup>
+    <!--<InternalsVisibleTo Include="AuthApi.IntegrationTests" />-->
+	<AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+		<_Parameter1>AuthApi.IntegrationTests</_Parameter1>
+	</AssemblyAttribute>
+	  
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.6" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.6" />
@@ -24,5 +28,8 @@
     <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.1" />
   </ItemGroup>
-
+  <ItemGroup>
+	  <InternalsVisibleTo Include="AuthApi.IntegrationTests" />
+	  <InternalsVisibleTo Include="AuthApi.InMemoryIntegrationTests" />
+  </ItemGroup>
 </Project>

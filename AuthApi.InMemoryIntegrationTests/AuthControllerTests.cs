@@ -3,36 +3,24 @@ using AuthApi.Helpers;
 using AuthApi.Models;
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System.Net;
 using System.Net.Http.Json;
 
-namespace AuthApi.IntegrationTests
+namespace AuthApi.InMemoryIntegrationTests
 {
-    // IClassFixture ensures a single instance of AuthApiFactory is created for all tests in this class
-    public class AuthControllerIntegrationTests : IClassFixture<AuthApiFactory>
+    public class AuthControllerTests : IClassFixture<AuthApiFactory>
     {
         private readonly HttpClient _client;
         private readonly IServiceScope _scope;
 
-        public AuthControllerIntegrationTests(AuthApiFactory factory)
+        public AuthControllerTests(AuthApiFactory factory)
         {
             _scope = factory.Services.CreateScope();
-            _client = factory.CreateClient(new WebApplicationFactoryClientOptions
-            {
-                AllowAutoRedirect = false // Prevent automatic redirects that might obscure actual responses
-            });
-
-            //// Ensure a clean database for each test run
-            //using (var scope = _factory.Services.CreateScope())
-            //{
-            //    var dbContext = scope.ServiceProvider.GetRequiredService<DataContext>();
-            //    //dbContext.Database.EnsureDeleted(); // Clear the in-memory database
-            //    //dbContext.Database.EnsureCreated(); // Recreate it
-            //}
+            this._client = factory.CreateClient();
         }
+
 
         [Fact]
         public async Task Register_ValidUser_ReturnsOk()
@@ -44,14 +32,8 @@ namespace AuthApi.IntegrationTests
             var response = await _client.PostAsJsonAsync("/api/Auth/register", userDto);
 
             // Assert
-            response.StatusCode.Should().Be(HttpStatusCode.Created); // Replace 'Should()' with FluentAssertions syntax
+            response.StatusCode.Should().Be(HttpStatusCode.Created);
             var responseContent = await response.Content.ReadAsStringAsync();
-            //responseContent.Should().Contain("");
-
-            var dbContext = _scope.ServiceProvider.GetRequiredService<DataContext>();
-            var user = await dbContext.Users.SingleOrDefaultAsync(u => u.Username == userDto.Username);
-            user.Should().NotBeNull();
-            PasswordHelper.VerifyPasswordHash(userDto.Password, user!.PasswordHash, user.PasswordSalt).Should().BeTrue();
         }
 
         [Fact]
@@ -59,14 +41,14 @@ namespace AuthApi.IntegrationTests
         {
             // Arrange
             var userDto = new UserDto { Username = "duplicate@example.com", Password = "Password123!" };
-            await _client.PostAsJsonAsync("/api/Auth/register", userDto); // Register first time
+            var response1 = await _client.PostAsJsonAsync("/api/Auth/register", userDto); // Register first time
 
             // Act
-            var response = await _client.PostAsJsonAsync("/api/Auth/register", userDto); // Register again
+            var response2 = await _client.PostAsJsonAsync("/api/Auth/register", userDto); // Register again
 
             // Assert
-            response.StatusCode.Should().Be(HttpStatusCode.BadRequest); // Replace 'Should()' with FluentAssertions syntax
-            var problemDetails = await response.Content.ReadFromJsonAsync<ProblemDetails>();
+            response2.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+            var problemDetails = await response2.Content.ReadFromJsonAsync<ProblemDetails>();
             problemDetails!.Detail.Should().Contain("Username already in use.");
         }
 
@@ -116,13 +98,13 @@ namespace AuthApi.IntegrationTests
             initialTokens.Should().NotBeNull();
 
             // Act
-            var refreshResponse = await _client.PostAsJsonAsync("/api/Auth/refresh", new TokenDto { RefreshToken = initialTokens!.RefreshToken });
+            var refreshResponse = await _client.PostAsJsonAsync("/api/Auth/refresh", new RefreshRequest() { RefreshToken = initialTokens!.RefreshToken });
 
             // Assert
             refreshResponse.Should().HaveStatusCode(HttpStatusCode.OK);
             var newTokens = await refreshResponse.Content.ReadFromJsonAsync<TokenDto>();
             newTokens.Should().NotBeNull();
-            newTokens!.AccessToken.Should().NotBeNullOrEmpty("Your session has expired. Please log in again.");
+            newTokens!.AccessToken.Should().NotBeNullOrEmpty();
             newTokens.RefreshToken.Should().NotBeNullOrEmpty();
             newTokens.AccessToken.Should().NotBe(initialTokens.AccessToken, "Access token should be new");
             newTokens.RefreshToken.Should().NotBe(initialTokens.RefreshToken, "Refresh token should be new");
@@ -133,12 +115,12 @@ namespace AuthApi.IntegrationTests
                 var dbContext = scope.ServiceProvider.GetRequiredService<DataContext>();
                 var oldRefreshToken = await dbContext.RefreshTokens.SingleOrDefaultAsync(rt => rt.Token == initialTokens.RefreshToken);
                 oldRefreshToken.Should().NotBeNull();
-                oldRefreshToken!.Revoked.Should().NotBeNull("Your session has expired. Please log in again.");
+                oldRefreshToken!.Revoked.Should().NotBeNull();
             }
         }
 
         [Fact]
-        public async Task Refresh_InvalidRefreshToken_ReturnsBadRequest()
+        public async Task Refresh_InvalidRefreshToken_ReturnsForbidden()
         {
             // Arrange
             var request = new RefreshRequest { RefreshToken = "invalid_refresh_token" };

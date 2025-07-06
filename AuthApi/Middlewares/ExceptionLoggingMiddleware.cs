@@ -8,8 +8,7 @@ namespace AuthApi.Middlewares
         private readonly RequestDelegate _next;
         private readonly ILogger<ExceptionLoggingMiddleware> _logger;
 
-        public ExceptionLoggingMiddleware(RequestDelegate next,
-                                          ILogger<ExceptionLoggingMiddleware> logger)
+        public ExceptionLoggingMiddleware(RequestDelegate next, ILogger<ExceptionLoggingMiddleware> logger)
         {
             _next = next;
             _logger = logger;
@@ -40,7 +39,32 @@ namespace AuthApi.Middlewares
                     Type = "https://yourapi.com/docs/errors/invalid-credentials",
                     Title = "Authentication failed",
                     Status = StatusCodes.Status401Unauthorized,
-                    Detail = "Invalid username or password.",
+                    Detail = "Username or password is incorrect.",
+                    Instance = context.Request.Path
+                };
+
+                await context.Response.WriteAsJsonAsync(problem);
+            }
+
+            catch (UsernameInUseException ex)
+            {
+                if (context.Response.HasStarted)
+                {
+                    _logger.LogWarning("Response already started, cannot modify for {Path}", context.Request.Path);
+                    throw;
+                }
+
+                _logger.LogWarning(ex, "Username already in use {Path}", context.Request.Path);
+                context.Response.Clear();
+                context.Response.StatusCode = StatusCodes.Status400BadRequest;
+                context.Response.ContentType = "application/problem+json";
+
+                var problem = new ProblemDetails
+                {
+                    Type = "https://yourapi.com/docs/errors/username-inuse",
+                    Title = "Authentication failed",
+                    Status = StatusCodes.Status400BadRequest,
+                    Detail = "Username already in use.",
                     Instance = context.Request.Path
                 };
 
@@ -56,14 +80,14 @@ namespace AuthApi.Middlewares
 
                 _logger.LogWarning(ex, "Refresh token expired for {Path}", context.Request.Path);
                 context.Response.Clear();
-                context.Response.StatusCode = StatusCodes.Status403Forbidden;
+                context.Response.StatusCode = StatusCodes.Status400BadRequest;
                 context.Response.ContentType = "application/problem+json";
 
                 var problem = new ProblemDetails
                 {
                     Type = "https://yourapi.com/docs/errors/refresh-token-expired",
                     Title = "Session expired",
-                    Status = StatusCodes.Status403Forbidden,
+                    Status = StatusCodes.Status400BadRequest,
                     Detail = "Your session has expired. Please log in again.",
                     Instance = context.Request.Path
                 };

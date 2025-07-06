@@ -39,11 +39,11 @@ namespace AuthApi.Controllers
 
         [HttpPost("refresh")]
         [ProducesResponseType(typeof(TokenDto), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status403Forbidden)]
-        public async Task<IActionResult> Refresh(string refreshToken)
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> Refresh(RefreshRequest request)
         {
             var ip = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "Unknown";
-            TokenDto token = await _authService.RefreshTokenAsync(refreshToken, ip);
+            TokenDto token = await _authService.RefreshTokenAsync(request.RefreshToken, ip);
             return Ok(token);
         }
 

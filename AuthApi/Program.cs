@@ -16,10 +16,10 @@ builder.Host.UseSerilog((context, configuration) =>
     configuration.ReadFrom.Configuration(context.Configuration));
 
 // 2. Core services
-builder.Services.AddDbContext<DataContext>(opts =>
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-builder.Services.AddScoped<IDataContext>(provider =>
-    provider.GetRequiredService<DataContext>());
+builder.Services.AddDbContext<IDataContext, DataContext>(opts =>
+    opts.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
+    sql => sql.EnableRetryOnFailure()
+));
 
 // 3. Custom services
 builder.Services.AddAuthServices();
@@ -151,7 +151,12 @@ app.MapHealthChecks("/health");
 app.MapControllers();
 
 // 10. Auto-migrate
-using var scope = app.Services.CreateScope();
-scope.ServiceProvider.GetRequiredService<DataContext>().Database.Migrate();
+if (builder.Configuration.GetValue<bool>("AutomaticMigrations"))
+{
+    using var scope = app.Services.CreateScope();
+    scope.ServiceProvider.GetRequiredService<DataContext>().Database.Migrate();
+}
 
 app.Run();
+
+public partial class Program { } // for integration tests

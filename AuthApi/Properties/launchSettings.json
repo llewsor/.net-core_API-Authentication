@@ -8,8 +8,8 @@
       "applicationUrl": "http://localhost:5184",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "ConnectionStrings__DefaultConnection_": "Server=machine;Database=AuthDb;User Id=authdb;Password=password;Encrypt=True;TrustServerCertificate=True;",
-        "ConnectionStrings__DefaultConnection": "Server=localhost,1433;Database=AuthDb;User Id=sa;Password=YourStrong!Passw0rd;",
+        "ConnectionStrings__DefaultConnection": "Server=machine;Database=AuthDb;User Id=authdb;Password=password;Encrypt=True;TrustServerCertificate=True;",
+        "ConnectionStrings__DefaultConnection_": "Server=localhost,1433;Database=AuthDb;User Id=sa;Password=YourStrong!Passw0rd;",
         "Jwt__Key": "baf975688386a7a4022421c32bd7d0fe01546b05e9a97b080dcecb6f8b0202c6",
         "Jwt__Issuer": "AuthApi",
         "Jwt__Audience": "AuthApiClients"
@@ -24,8 +24,8 @@
       "applicationUrl": "https://localhost:7010;http://localhost:5184",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "ConnectionStrings__DefaultConnection_": "Server=machine;Database=AuthDb;User Id=authdb;Password=password;Encrypt=True;TrustServerCertificate=True;",
-        "ConnectionStrings__DefaultConnection": "Server=localhost,1433;Database=AuthDb;User Id=sa;Password=YourStrong!Passw0rd;Encrypt=True;TrustServerCertificate=True;",
+        "ConnectionStrings__DefaultConnection": "Server=machine;Database=AuthDb;User Id=authdb;Password=password;Encrypt=True;TrustServerCertificate=True;",
+        "ConnectionStrings__DefaultConnection_": "Server=localhost,1433;Database=AuthDb;User Id=sa;Password=YourStrong!Passw0rd;Encrypt=True;TrustServerCertificate=True;",
         "Jwt__Key": "baf975688386a7a4022421c32bd7d0fe01546b05e9a97b080dcecb6f8b0202c6",
         "Jwt__Issuer": "AuthApi",
         "Jwt__Audience": "AuthApiClients"
