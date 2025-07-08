@@ -11,16 +11,11 @@ namespace AuthApi.IntegrationTests
 {
     public class AuthApiFactory : WebApplicationFactory<Program>, IAsyncLifetime
     {
-        private readonly MsSqlContainer _msSqlContainer;
-
-        public AuthApiFactory(MsSqlContainer msSqlContainer)
-        {
-            _msSqlContainer = new MsSqlBuilder()
+        private readonly MsSqlContainer _msSqlContainer = new MsSqlBuilder()
                 .WithImage("mcr.microsoft.com/mssql/server:2022-latest")
                 .WithName($"authapi-test-{Guid.NewGuid()}")
                 .WithPassword("Your_strong(!)Password")
-                .Build(); ;
-        }
+                .Build();
 
         protected override void ConfigureWebHost(IWebHostBuilder builder)
         {

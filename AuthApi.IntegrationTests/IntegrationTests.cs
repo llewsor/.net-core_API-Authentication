@@ -38,7 +38,7 @@ namespace AuthApi.IntegrationTests
         public async Task Register_ValidUser_ReturnsOk()
         {
             // Arrange
-            var userDto = new UserRequest { Username = "test@example.com", Password = "Password123!" };
+            var userDto = new UserRequest { Username = "test", Password = "Password123!" };
 
             // Act
             var response = await _client.PostAsJsonAsync("/api/Auth/register", userDto);
@@ -58,7 +58,7 @@ namespace AuthApi.IntegrationTests
         public async Task Register_DuplicateUser_ReturnsBadRequest()
         {
             // Arrange
-            var userDto = new UserRequest { Username = "duplicate@example.com", Password = "Password123!" };
+            var userDto = new UserRequest { Username = "duplicate", Password = "Password123!" };
             await _client.PostAsJsonAsync("/api/Auth/register", userDto); // Register first time
 
             // Act
@@ -71,9 +71,9 @@ namespace AuthApi.IntegrationTests
         }
 
         [Theory]
-        [InlineData("user@example.com", "Password123!", HttpStatusCode.OK)]
-        [InlineData("nonexistent@example.com", "Password123!", HttpStatusCode.Unauthorized)]
-        [InlineData("user@example.com", "WrongPassword!", HttpStatusCode.Unauthorized)]
+        [InlineData("user", "Password123!", HttpStatusCode.OK)]
+        [InlineData("nonexistent", "Password123!", HttpStatusCode.Unauthorized)]
+        [InlineData("user", "WrongPassword!", HttpStatusCode.Unauthorized)]
         public async Task Login_ReturnsCorrectStatusCodeAndToken(string email, string password, HttpStatusCode expectedStatusCode)
         {
             // Arrange
@@ -108,7 +108,7 @@ namespace AuthApi.IntegrationTests
         public async Task Refresh_ValidRefreshToken_ReturnsNewTokens()
         {
             // Arrange
-            var userEmail = "refresh_user@example.com";
+            var userEmail = "refresh_user";
             var userPassword = "Password123!";
             await RegisterUserAsync(userEmail, userPassword);
             var loginResponse = await _client.PostAsJsonAsync("/api/Auth/login", new LoginRequest { Username = userEmail, Password = userPassword });
@@ -156,7 +156,7 @@ namespace AuthApi.IntegrationTests
         public async Task GetSecret_WithValidToken_ReturnsOk()
         {
             // Arrange
-            var userEmail = "secret_user@example.com";
+            var userEmail = "secret_user";
             var userPassword = "Password123!";
             await RegisterUserAsync(userEmail, userPassword);
             var loginResponse = await _client.PostAsJsonAsync("/api/Auth/login", new LoginRequest { Username = userEmail, Password = userPassword });
@@ -194,8 +194,8 @@ namespace AuthApi.IntegrationTests
         public async Task GetAdminData_WithAdminToken_ReturnsOk()
         {
             // Arrange
-            var adminUserEmail = "admin@example.com";
-            var adminUserPassword = "AdminPassword123!";
+            var adminUserEmail = "admin";
+            var adminUserPassword = "AdminPassword";
 
             // Register an admin user (directly manipulate DB for role)
             using (var scope = _scope)
@@ -236,7 +236,7 @@ namespace AuthApi.IntegrationTests
         public async Task GetAdminData_WithUserToken_ReturnsForbidden()
         {
             // Arrange
-            var regularUserEmail = "regular_user@example.com";
+            var regularUserEmail = "regular_user";
             var regularUserPassword = "Password123!";
             await RegisterUserAsync(regularUserEmail, regularUserPassword); // Default role is "User"
 
