@@ -1,0 +1,1905 @@
+2025-07-08 02:20:22.354 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-07-08 02:20:22.526 +02:00 [DBG] Hosting starting
+2025-07-08 02:20:22.583 +02:00 [INF] User profile is available. Using 'C:\Users\roswe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-07-08 02:20:22.616 +02:00 [DBG] Reading data from file 'C:\Users\roswe\AppData\Local\ASP.NET\DataProtection-Keys\key-73041f8c-a61f-4811-8fa3-a792c5f82e10.xml'.
+2025-07-08 02:20:22.682 +02:00 [DBG] Reading data from file 'C:\Users\roswe\AppData\Local\ASP.NET\DataProtection-Keys\key-adc15277-1c96-4eca-989b-83e26291598e.xml'.
+2025-07-08 02:20:22.723 +02:00 [DBG] Found key {73041f8c-a61f-4811-8fa3-a792c5f82e10}.
+2025-07-08 02:20:22.744 +02:00 [DBG] Found key {adc15277-1c96-4eca-989b-83e26291598e}.
+2025-07-08 02:20:22.767 +02:00 [DBG] Considering key {adc15277-1c96-4eca-989b-83e26291598e} with expiration date 2025-07-19 12:16:03Z as default key.
+2025-07-08 02:20:22.783 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-07-08 02:20:22.793 +02:00 [DBG] Decrypting secret element using Windows DPAPI.
+2025-07-08 02:20:22.801 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-07-08 02:20:22.820 +02:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2025-07-08 02:20:22.834 +02:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2025-07-08 02:20:22.847 +02:00 [DBG] Using key {adc15277-1c96-4eca-989b-83e26291598e} as the default key.
+2025-07-08 02:20:22.852 +02:00 [DBG] Key ring with default key {adc15277-1c96-4eca-989b-83e26291598e} was loaded during application startup.
+2025-07-08 02:20:22.868 +02:00 [DBG] Middleware loaded
+2025-07-08 02:20:22.878 +02:00 [DBG] Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (16499 B).
+2025-07-08 02:20:22.881 +02:00 [DBG] Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+2025-07-08 02:20:23.027 +02:00 [DBG] Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True}
+2025-07-08 02:20:23.038 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-07-08 02:20:23.052 +02:00 [DBG] Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+2025-07-08 02:20:23.277 +02:00 [INF] Now listening on: https://localhost:7010
+2025-07-08 02:20:23.281 +02:00 [INF] Now listening on: http://localhost:5184
+2025-07-08 02:20:23.284 +02:00 [DBG] Loaded hosting startup assembly AuthApi
+2025-07-08 02:20:23.287 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-07-08 02:20:23.289 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-07-08 02:20:23.292 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-07-08 02:20:23.304 +02:00 [DBG] Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-07-08 02:20:23.310 +02:00 [DBG] Executing API description provider 'DefaultApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-07-08 02:20:23.350 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-08 02:20:23.387 +02:00 [INF] Hosting environment: Development
+2025-07-08 02:20:23.389 +02:00 [INF] Content root path: C:\Projects\.net-core_API-Authentication\AuthApi
+2025-07-08 02:20:23.392 +02:00 [DBG] Hosting started
+2025-07-08 02:20:36.064 +02:00 [DBG] Connection id "0HNDTML19LCGR" accepted.
+2025-07-08 02:20:36.066 +02:00 [DBG] Connection id "0HNDTML19LCGR" started.
+2025-07-08 02:20:36.125 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5184/api/auth/register - application/json 58
+2025-07-08 02:20:36.203 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/register'
+2025-07-08 02:20:36.222 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.Register (AuthApi)' with route pattern 'api/Auth/register' is valid for the request path '/api/auth/register'
+2025-07-08 02:20:36.228 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.Register (AuthApi)'
+2025-07-08 02:20:36.270 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:20:36.289 +02:00 [DBG] Https port '7010' loaded from configuration.
+2025-07-08 02:20:36.296 +02:00 [DBG] Redirecting to 'https://localhost:7010/api/auth/register'.
+2025-07-08 02:20:36.316 +02:00 [INF] HTTP POST /api/auth/register responded 307 in 31.2324 ms
+2025-07-08 02:20:36.360 +02:00 [DBG] Connection id "0HNDTML19LCGR" completed keep alive response.
+2025-07-08 02:20:36.368 +02:00 [DBG] Connection id "0HNDTML19LCGS" accepted.
+2025-07-08 02:20:36.368 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5184/api/auth/register - 307 0 null 254.7686ms
+2025-07-08 02:20:36.369 +02:00 [DBG] Connection id "0HNDTML19LCGS" started.
+2025-07-08 02:20:36.407 +02:00 [DBG] Connection id "0HNDTML19LCGR", Request id "0HNDTML19LCGR:00000001": started reading request body.
+2025-07-08 02:20:36.430 +02:00 [DBG] Connection id "0HNDTML19LCGR", Request id "0HNDTML19LCGR:00000001": done reading request body.
+2025-07-08 02:20:36.454 +02:00 [DBG] Connection 0HNDTML19LCGS established using the following protocol: "Tls13"
+2025-07-08 02:20:36.475 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7010/api/auth/register - application/json 58
+2025-07-08 02:20:36.486 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/register'
+2025-07-08 02:20:36.493 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.Register (AuthApi)' with route pattern 'api/Auth/register' is valid for the request path '/api/auth/register'
+2025-07-08 02:20:36.496 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.Register (AuthApi)'
+2025-07-08 02:20:36.498 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:20:36.583 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-08 02:20:36.589 +02:00 [INF] Executing endpoint 'AuthApi.Controllers.AuthController.Register (AuthApi)'
+2025-07-08 02:20:36.614 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(AuthApi.Models.UserRequest) on controller AuthApi.Controllers.AuthController (AuthApi).
+2025-07-08 02:20:36.622 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-08 02:20:36.625 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-08 02:20:36.628 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-08 02:20:36.641 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-08 02:20:36.644 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-08 02:20:36.670 +02:00 [DBG] Executing controller factory for controller AuthApi.Controllers.AuthController (AuthApi)
+2025-07-08 02:20:36.808 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-07-08 02:20:36.827 +02:00 [DBG] Executed controller factory for controller AuthApi.Controllers.AuthController (AuthApi)
+2025-07-08 02:20:36.837 +02:00 [DBG] Attempting to bind parameter 'request' of type 'AuthApi.Models.UserRequest' ...
+2025-07-08 02:20:36.844 +02:00 [DBG] Attempting to bind parameter 'request' of type 'AuthApi.Models.UserRequest' using the name '' in request data ...
+2025-07-08 02:20:36.857 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-07-08 02:20:36.863 +02:00 [DBG] Connection id "0HNDTML19LCGS", Request id "0HNDTML19LCGS:00000001": started reading request body.
+2025-07-08 02:20:36.867 +02:00 [DBG] Connection id "0HNDTML19LCGS", Request id "0HNDTML19LCGS:00000001": done reading request body.
+2025-07-08 02:20:36.873 +02:00 [DBG] JSON input formatter succeeded, deserializing to type 'AuthApi.Models.UserRequest'
+2025-07-08 02:20:36.874 +02:00 [DBG] Done attempting to bind parameter 'request' of type 'AuthApi.Models.UserRequest'.
+2025-07-08 02:20:36.881 +02:00 [DBG] Done attempting to bind parameter 'request' of type 'AuthApi.Models.UserRequest'.
+2025-07-08 02:20:36.884 +02:00 [DBG] Attempting to validate the bound parameter 'request' of type 'AuthApi.Models.UserRequest' ...
+2025-07-08 02:20:36.890 +02:00 [DBG] Done attempting to validate the bound parameter 'request' of type 'AuthApi.Models.UserRequest'.
+2025-07-08 02:20:37.497 +02:00 [DBG] Entity Framework Core 9.0.6 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:9.0.6' with options: EngineType=SqlServer 
+2025-07-08 02:20:37.576 +02:00 [DBG] Compiling query expression: 
+'DbSet<User>()
+    .SingleOrDefault(u => u.Username == __username_0)'
+2025-07-08 02:20:37.838 +02:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<User>(
+    asyncEnumerable: SingleQueryingEnumerable.Create<User>(
+        relationalQueryContext: (RelationalQueryContext)queryContext, 
+        relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.IsBlocked (bool) Required ValueGenerated.OnAdd, 1], [Property: User.PasswordHash (byte[]) Required, 2], [Property: User.PasswordSalt (byte[]) Required, 3], [Property: User.Role (string) Required, 4], [Property: User.Username (string) Required Index MaxLength(50), 5] }
+            SELECT TOP(2) u.Id, u.IsBlocked, u.PasswordHash, u.PasswordSalt, u.Role, u.Username
+            FROM Users AS u
+            WHERE u.Username == @__username_0) | Resolver: c => new RelationalCommandCache(
+            c.Dependencies.MemoryCache, 
+            c.RelationalDependencies.QuerySqlGeneratorFactory, 
+            c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.IsBlocked (bool) Required ValueGenerated.OnAdd, 1], [Property: User.PasswordHash (byte[]) Required, 2], [Property: User.PasswordSalt (byte[]) Required, 3], [Property: User.Role (string) Required, 4], [Property: User.Username (string) Required Index MaxLength(50), 5] }
+            SELECT TOP(2) u.Id, u.IsBlocked, u.PasswordHash, u.PasswordSalt, u.Role, u.Username
+            FROM Users AS u
+            WHERE u.Username == @__username_0, 
+            False, 
+            new HashSet<string>(
+                new string[]{ }, 
+                StringComparer.Ordinal
+            )
+        )].GetRelationalCommandTemplate(parameters), 
+        readerColumns: [LIFTABLE Constant: ReaderColumn[] { ReaderColumn<int>, ReaderColumn<bool>, ReaderColumn<object>, ReaderColumn<object>, ReaderColumn<object>, ReaderColumn<object> } | Resolver: namelessParameter{0} => new ReaderColumn[]
+        { 
+            new ReaderColumn<int>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("Id"), 
+                (dataReader, indexMap) => dataReader.GetInt32(0)
+            ), 
+            new ReaderColumn<bool>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("IsBlocked"), 
+                (dataReader, indexMap) => dataReader.GetBoolean(1)
+            ), 
+            new ReaderColumn<object>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("PasswordHash"), 
+                (dataReader, indexMap) => (object)dataReader.GetFieldValue<byte[]>(2)
+            ), 
+            new ReaderColumn<object>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("PasswordSalt"), 
+                (dataReader, indexMap) => (object)dataReader.GetFieldValue<byte[]>(3)
+            ), 
+            new ReaderColumn<object>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("Role"), 
+                (dataReader, indexMap) => (object)dataReader.GetString(4)
+            ), 
+            new ReaderColumn<object>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("Username"), 
+                (dataReader, indexMap) => (object)dataReader.GetString(5)
+            ) 
+        }], 
+        shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+        {
+            User entity;
+            entity = 
+            {
+                MaterializationContext materializationContext1;
+                IEntityType entityType1;
+                User instance1;
+                InternalEntityEntry entry1;
+                bool hasNullKey1;
+                materializationContext1 = new MaterializationContext(
+                    [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                    queryContext.Context
+                );
+                instance1 = default(User);
+                entry1 = queryContext.TryGetEntry(
+                    key: [LIFTABLE Constant: Key: User.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindPrimaryKey()], 
+                    keyValues: new object[]{ (object)dataReader.GetInt32(0) }, 
+                    throwOnNullKey: True, 
+                    hasNullKey: hasNullKey1);
+                !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+                {
+                    entityType1 = entry1.EntityType;
+                    return instance1 = (User)entry1.Entity;
+                } : 
+                {
+                    ISnapshot shadowSnapshot1;
+                    shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                    entityType1 = [LIFTABLE Constant: EntityType: User | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("AuthApi.Models.User")];
+                    instance1 = switch (entityType1)
+                    {
+                        case [LIFTABLE Constant: EntityType: User | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("AuthApi.Models.User")]: 
+                            {
+                                return 
+                                {
+                                    User instance;
+                                    instance = new User();
+                                    instance.<Id>k__BackingField = dataReader.GetInt32(0);
+                                    instance.<IsBlocked>k__BackingField = dataReader.GetBoolean(1);
+                                    instance.<PasswordHash>k__BackingField = (byte[])dataReader.GetFieldValue<object>(2);
+                                    instance.<PasswordSalt>k__BackingField = (byte[])dataReader.GetFieldValue<object>(3);
+                                    instance.<Role>k__BackingField = (string)dataReader.GetFieldValue<object>(4);
+                                    instance.<Username>k__BackingField = (string)dataReader.GetFieldValue<object>(5);
+                                    (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                        context: materializationContext1.Context, 
+                                        entity: instance, 
+                                        queryTrackingBehavior: TrackAll, 
+                                        structuralType: [LIFTABLE Constant: EntityType: User | Resolver: namelessParameter{3} => namelessParameter{3}.Dependencies.Model.FindEntityType("AuthApi.Models.User")]) : default(void);
+                                    return instance;
+                                }}
+                        default: 
+                            default(User)
+                    }
+                    ;
+                    entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                        entityType: entityType1, 
+                        entity: instance1, 
+                        snapshot: shadowSnapshot1);
+                    return instance1;
+                } : default(void);
+                return instance1;
+            };
+            return entity;
+        }, 
+        contextType: AuthApi.Data.DataContext, 
+        standAloneStateManager: False, 
+        detailedErrorsEnabled: False, 
+        threadSafetyChecksEnabled: True), 
+    cancellationToken: queryContext.CancellationToken)'
+2025-07-08 02:20:37.919 +02:00 [DBG] Creating DbConnection.
+2025-07-08 02:20:37.939 +02:00 [DBG] Created DbConnection. (19ms).
+2025-07-08 02:20:37.945 +02:00 [DBG] Opening connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:20:38.366 +02:00 [DBG] Opened connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:20:38.373 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-07-08 02:20:38.383 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (5ms).
+2025-07-08 02:20:38.399 +02:00 [DBG] Initialized DbCommand for 'ExecuteReader' (26ms).
+2025-07-08 02:20:38.424 +02:00 [DBG] Executing DbCommand [Parameters=[@__username_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[IsBlocked], [u].[PasswordHash], [u].[PasswordSalt], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2025-07-08 02:20:38.563 +02:00 [INF] Executed DbCommand (141ms) [Parameters=[@__username_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[IsBlocked], [u].[PasswordHash], [u].[PasswordSalt], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2025-07-08 02:20:38.607 +02:00 [DBG] Closing data reader to 'AuthDb' on server 'machine'.
+2025-07-08 02:20:38.619 +02:00 [DBG] A data reader for 'AuthDb' on server 'machine' is being disposed after spending 17ms reading results.
+2025-07-08 02:20:38.625 +02:00 [DBG] Closing connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:20:38.639 +02:00 [DBG] Closed connection to database 'AuthDb' on server 'machine' (13ms).
+2025-07-08 02:20:38.683 +02:00 [DBG] 'DataContext' generated a temporary value for the property 'User.Id'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:20:38.757 +02:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:20:38.770 +02:00 [DBG] SaveChanges starting for 'DataContext'.
+2025-07-08 02:20:38.775 +02:00 [DBG] DetectChanges starting for 'DataContext'.
+2025-07-08 02:20:38.795 +02:00 [DBG] DetectChanges completed for 'DataContext'.
+2025-07-08 02:20:38.897 +02:00 [DBG] Opening connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:20:38.905 +02:00 [DBG] Opened connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:20:38.912 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-07-08 02:20:38.914 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-07-08 02:20:38.921 +02:00 [DBG] Initialized DbCommand for 'ExecuteReader' (8ms).
+2025-07-08 02:20:38.925 +02:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (Size = 8000) (DbType = Binary), @p1='?' (Size = 8000) (DbType = Binary), @p2='?' (Size = 4000), @p3='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([PasswordHash], [PasswordSalt], [Role], [Username])
+OUTPUT INSERTED.[Id], INSERTED.[IsBlocked]
+VALUES (@p0, @p1, @p2, @p3);
+2025-07-08 02:20:38.989 +02:00 [INF] Executed DbCommand (64ms) [Parameters=[@p0='?' (Size = 8000) (DbType = Binary), @p1='?' (Size = 8000) (DbType = Binary), @p2='?' (Size = 4000), @p3='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([PasswordHash], [PasswordSalt], [Role], [Username])
+OUTPUT INSERTED.[Id], INSERTED.[IsBlocked]
+VALUES (@p0, @p1, @p2, @p3);
+2025-07-08 02:20:39.023 +02:00 [DBG] The foreign key property 'User.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2025-07-08 02:20:39.043 +02:00 [DBG] Closing data reader to 'AuthDb' on server 'machine'.
+2025-07-08 02:20:39.055 +02:00 [DBG] A data reader for 'AuthDb' on server 'machine' is being disposed after spending 53ms reading results.
+2025-07-08 02:20:39.059 +02:00 [DBG] Closing connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:20:39.063 +02:00 [DBG] Closed connection to database 'AuthDb' on server 'machine' (3ms).
+2025-07-08 02:20:39.083 +02:00 [DBG] An entity of type 'User' tracked by 'DataContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:20:39.099 +02:00 [DBG] SaveChanges completed for 'DataContext' with 1 entities written to the database.
+2025-07-08 02:20:39.108 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-08 02:20:39.125 +02:00 [DBG] No information found on request to perform content negotiation.
+2025-07-08 02:20:39.136 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-08 02:20:39.138 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-08 02:20:39.141 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter' and content type '' to write the response.
+2025-07-08 02:20:39.146 +02:00 [INF] Executing CreatedResult, writing value of type 'null'.
+2025-07-08 02:20:39.151 +02:00 [INF] Executed action AuthApi.Controllers.AuthController.Register (AuthApi) in 2480.1481ms
+2025-07-08 02:20:39.154 +02:00 [INF] Executed endpoint 'AuthApi.Controllers.AuthController.Register (AuthApi)'
+2025-07-08 02:20:39.157 +02:00 [INF] HTTP POST /api/auth/register responded 201 in 2656.9160 ms
+2025-07-08 02:20:39.169 +02:00 [DBG] Connection id "0HNDTML19LCGS" completed keep alive response.
+2025-07-08 02:20:39.175 +02:00 [DBG] 'DataContext' disposed.
+2025-07-08 02:20:39.193 +02:00 [DBG] Disposing connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:20:39.203 +02:00 [DBG] Disposed connection to database '' on server '' (8ms).
+2025-07-08 02:20:39.209 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7010/api/auth/register - 201 0 null 2733.4266ms
+2025-07-08 02:20:45.397 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5184/api/auth/login - application/json 58
+2025-07-08 02:20:45.404 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/login'
+2025-07-08 02:20:45.405 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.Login (AuthApi)' with route pattern 'api/Auth/login' is valid for the request path '/api/auth/login'
+2025-07-08 02:20:45.407 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.Login (AuthApi)'
+2025-07-08 02:20:45.410 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:20:45.413 +02:00 [DBG] Redirecting to 'https://localhost:7010/api/auth/login'.
+2025-07-08 02:20:45.420 +02:00 [INF] HTTP POST /api/auth/login responded 307 in 7.5997 ms
+2025-07-08 02:20:45.423 +02:00 [DBG] Connection id "0HNDTML19LCGR" completed keep alive response.
+2025-07-08 02:20:45.425 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5184/api/auth/login - 307 0 null 27.7627ms
+2025-07-08 02:20:45.425 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7010/api/auth/login - application/json 58
+2025-07-08 02:20:45.440 +02:00 [DBG] Connection id "0HNDTML19LCGR", Request id "0HNDTML19LCGR:00000002": started reading request body.
+2025-07-08 02:20:45.443 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/login'
+2025-07-08 02:20:45.453 +02:00 [DBG] Connection id "0HNDTML19LCGR", Request id "0HNDTML19LCGR:00000002": done reading request body.
+2025-07-08 02:20:45.455 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.Login (AuthApi)' with route pattern 'api/Auth/login' is valid for the request path '/api/auth/login'
+2025-07-08 02:20:45.460 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.Login (AuthApi)'
+2025-07-08 02:20:45.468 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:20:45.470 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-08 02:20:45.473 +02:00 [INF] Executing endpoint 'AuthApi.Controllers.AuthController.Login (AuthApi)'
+2025-07-08 02:20:45.480 +02:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(AuthApi.Models.LoginRequest) on controller AuthApi.Controllers.AuthController (AuthApi).
+2025-07-08 02:20:45.487 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-08 02:20:45.490 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-08 02:20:45.494 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-08 02:20:45.498 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-08 02:20:45.502 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-08 02:20:45.506 +02:00 [DBG] Executing controller factory for controller AuthApi.Controllers.AuthController (AuthApi)
+2025-07-08 02:20:45.522 +02:00 [DBG] Executed controller factory for controller AuthApi.Controllers.AuthController (AuthApi)
+2025-07-08 02:20:45.527 +02:00 [DBG] Attempting to bind parameter 'request' of type 'AuthApi.Models.LoginRequest' ...
+2025-07-08 02:20:45.529 +02:00 [DBG] Attempting to bind parameter 'request' of type 'AuthApi.Models.LoginRequest' using the name '' in request data ...
+2025-07-08 02:20:45.532 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-07-08 02:20:45.534 +02:00 [DBG] Connection id "0HNDTML19LCGS", Request id "0HNDTML19LCGS:00000002": started reading request body.
+2025-07-08 02:20:45.536 +02:00 [DBG] Connection id "0HNDTML19LCGS", Request id "0HNDTML19LCGS:00000002": done reading request body.
+2025-07-08 02:20:45.539 +02:00 [DBG] JSON input formatter succeeded, deserializing to type 'AuthApi.Models.LoginRequest'
+2025-07-08 02:20:45.551 +02:00 [DBG] Done attempting to bind parameter 'request' of type 'AuthApi.Models.LoginRequest'.
+2025-07-08 02:20:45.556 +02:00 [DBG] Done attempting to bind parameter 'request' of type 'AuthApi.Models.LoginRequest'.
+2025-07-08 02:20:45.565 +02:00 [DBG] Attempting to validate the bound parameter 'request' of type 'AuthApi.Models.LoginRequest' ...
+2025-07-08 02:20:45.568 +02:00 [DBG] Done attempting to validate the bound parameter 'request' of type 'AuthApi.Models.LoginRequest'.
+2025-07-08 02:20:45.605 +02:00 [DBG] Entity Framework Core 9.0.6 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:9.0.6' with options: EngineType=SqlServer 
+2025-07-08 02:20:45.615 +02:00 [DBG] Creating DbConnection.
+2025-07-08 02:20:45.616 +02:00 [DBG] Created DbConnection. (1ms).
+2025-07-08 02:20:45.618 +02:00 [DBG] Opening connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:20:45.627 +02:00 [DBG] Opened connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:20:45.630 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-07-08 02:20:45.631 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-07-08 02:20:45.633 +02:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-07-08 02:20:45.637 +02:00 [DBG] Executing DbCommand [Parameters=[@__username_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[IsBlocked], [u].[PasswordHash], [u].[PasswordSalt], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2025-07-08 02:20:45.645 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__username_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[IsBlocked], [u].[PasswordHash], [u].[PasswordSalt], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2025-07-08 02:20:45.655 +02:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:20:45.666 +02:00 [DBG] Closing data reader to 'AuthDb' on server 'machine'.
+2025-07-08 02:20:45.675 +02:00 [DBG] A data reader for 'AuthDb' on server 'machine' is being disposed after spending 22ms reading results.
+2025-07-08 02:20:45.678 +02:00 [DBG] Closing connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:20:45.680 +02:00 [DBG] Closed connection to database 'AuthDb' on server 'machine' (2ms).
+2025-07-08 02:20:45.687 +02:00 [DBG] 'DataContext' generated a temporary value for the property 'RefreshToken.Id'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:20:45.704 +02:00 [DBG] The navigation 'RefreshToken.User' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:20:45.714 +02:00 [DBG] Context 'DataContext' started tracking 'RefreshToken' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:20:45.726 +02:00 [DBG] SaveChanges starting for 'DataContext'.
+2025-07-08 02:20:45.727 +02:00 [DBG] DetectChanges starting for 'DataContext'.
+2025-07-08 02:20:45.737 +02:00 [DBG] DetectChanges completed for 'DataContext'.
+2025-07-08 02:20:45.741 +02:00 [DBG] Opening connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:20:45.743 +02:00 [DBG] Opened connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:20:45.747 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-07-08 02:20:45.757 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (10ms).
+2025-07-08 02:20:45.761 +02:00 [DBG] Initialized DbCommand for 'ExecuteReader' (14ms).
+2025-07-08 02:20:45.763 +02:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([Created], [Expires], [Revoked], [RevokedByIp], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-07-08 02:20:45.775 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([Created], [Expires], [Revoked], [RevokedByIp], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-07-08 02:20:45.788 +02:00 [DBG] The foreign key property 'RefreshToken.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2025-07-08 02:20:45.791 +02:00 [DBG] Closing data reader to 'AuthDb' on server 'machine'.
+2025-07-08 02:20:45.801 +02:00 [DBG] A data reader for 'AuthDb' on server 'machine' is being disposed after spending 13ms reading results.
+2025-07-08 02:20:45.805 +02:00 [DBG] Closing connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:20:45.808 +02:00 [DBG] Closed connection to database 'AuthDb' on server 'machine' (2ms).
+2025-07-08 02:20:45.817 +02:00 [DBG] An entity of type 'RefreshToken' tracked by 'DataContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:20:45.821 +02:00 [DBG] SaveChanges completed for 'DataContext' with 1 entities written to the database.
+2025-07-08 02:20:45.867 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-08 02:20:45.882 +02:00 [DBG] No information found on request to perform content negotiation.
+2025-07-08 02:20:45.884 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-08 02:20:45.887 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-08 02:20:45.895 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-08 02:20:45.898 +02:00 [INF] Executing OkObjectResult, writing value of type 'AuthApi.Models.TokenDto'.
+2025-07-08 02:20:45.905 +02:00 [INF] Executed action AuthApi.Controllers.AuthController.Login (AuthApi) in 398.7459ms
+2025-07-08 02:20:45.910 +02:00 [INF] Executed endpoint 'AuthApi.Controllers.AuthController.Login (AuthApi)'
+2025-07-08 02:20:45.914 +02:00 [INF] HTTP POST /api/auth/login responded 200 in 443.9052 ms
+2025-07-08 02:20:45.919 +02:00 [DBG] Connection id "0HNDTML19LCGS" completed keep alive response.
+2025-07-08 02:20:45.926 +02:00 [DBG] 'DataContext' disposed.
+2025-07-08 02:20:45.929 +02:00 [DBG] Disposing connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:20:45.931 +02:00 [DBG] Disposed connection to database '' on server '' (2ms).
+2025-07-08 02:20:45.941 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7010/api/auth/login - 200 null application/json; charset=utf-8 515.7562ms
+2025-07-08 02:21:51.135 +02:00 [DBG] Connection id "0HNDTML19LCGR" received FIN.
+2025-07-08 02:21:51.135 +02:00 [DBG] Connection id "0HNDTML19LCGS" received FIN.
+2025-07-08 02:21:51.182 +02:00 [DBG] Connection id "0HNDTML19LCGR" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-08 02:21:51.186 +02:00 [DBG] Connection id "0HNDTML19LCGS" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-08 02:21:51.221 +02:00 [DBG] Connection id "0HNDTML19LCGR" disconnecting.
+2025-07-08 02:21:51.223 +02:00 [DBG] Connection id "0HNDTML19LCGS" disconnecting.
+2025-07-08 02:21:51.227 +02:00 [DBG] Connection id "0HNDTML19LCGR" stopped.
+2025-07-08 02:21:51.244 +02:00 [DBG] Connection id "0HNDTML19LCGS" stopped.
+2025-07-08 02:22:02.348 +02:00 [DBG] Connection id "0HNDTML19LCGT" accepted.
+2025-07-08 02:22:02.351 +02:00 [DBG] Connection id "0HNDTML19LCGT" started.
+2025-07-08 02:22:02.355 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5184/api/auth/secret - null null
+2025-07-08 02:22:02.359 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:22:02.370 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:22:02.372 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:22:02.380 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:22:02.387 +02:00 [DBG] Redirecting to 'https://localhost:7010/api/auth/secret'.
+2025-07-08 02:22:02.389 +02:00 [INF] HTTP GET /api/auth/secret responded 307 in 2.0996 ms
+2025-07-08 02:22:02.392 +02:00 [DBG] Connection id "0HNDTML19LCGT" completed keep alive response.
+2025-07-08 02:22:02.394 +02:00 [DBG] Connection id "0HNDTML19LCGU" accepted.
+2025-07-08 02:22:02.400 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5184/api/auth/secret - 307 0 null 45.1569ms
+2025-07-08 02:22:02.403 +02:00 [DBG] Connection id "0HNDTML19LCGU" started.
+2025-07-08 02:22:02.421 +02:00 [DBG] Connection 0HNDTML19LCGU established using the following protocol: "Tls13"
+2025-07-08 02:22:02.422 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7010/api/auth/secret - null null
+2025-07-08 02:22:02.434 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:22:02.436 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:22:02.438 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:22:02.444 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:22:02.449 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-08 02:22:02.454 +02:00 [DBG] Policy authentication schemes  did not succeed
+2025-07-08 02:22:02.465 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-07-08 02:22:02.471 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-07-08 02:22:02.480 +02:00 [INF] HTTP GET /api/auth/secret responded 401 in 33.3174 ms
+2025-07-08 02:22:02.484 +02:00 [DBG] Connection id "0HNDTML19LCGU" completed keep alive response.
+2025-07-08 02:22:02.486 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7010/api/auth/secret - 401 0 null 63.413ms
+2025-07-08 02:22:27.812 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5184/api/auth/secret - null null
+2025-07-08 02:22:27.832 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:22:27.836 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:22:27.839 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:22:27.841 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:22:27.849 +02:00 [DBG] Redirecting to 'https://localhost:7010/api/auth/secret'.
+2025-07-08 02:22:27.852 +02:00 [INF] HTTP GET /api/auth/secret responded 307 in 2.9563 ms
+2025-07-08 02:22:27.856 +02:00 [DBG] Connection id "0HNDTML19LCGT" completed keep alive response.
+2025-07-08 02:22:27.862 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7010/api/auth/secret - null null
+2025-07-08 02:22:27.867 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5184/api/auth/secret - 307 0 null 86.2042ms
+2025-07-08 02:22:27.872 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:22:27.884 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:22:27.887 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:22:27.898 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:22:27.900 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-08 02:22:27.902 +02:00 [DBG] Policy authentication schemes  did not succeed
+2025-07-08 02:22:27.905 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-07-08 02:22:27.915 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-07-08 02:22:27.916 +02:00 [INF] HTTP GET /api/auth/secret responded 401 in 16.6948 ms
+2025-07-08 02:22:27.919 +02:00 [DBG] Connection id "0HNDTML19LCGU" completed keep alive response.
+2025-07-08 02:22:27.922 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7010/api/auth/secret - 401 0 null 63.9583ms
+2025-07-08 02:22:49.496 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5184/api/auth/secret - null null
+2025-07-08 02:22:49.506 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:22:49.510 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:22:49.521 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:22:49.523 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:22:49.526 +02:00 [DBG] Redirecting to 'https://localhost:7010/api/auth/secret'.
+2025-07-08 02:22:49.534 +02:00 [INF] HTTP GET /api/auth/secret responded 307 in 7.7824 ms
+2025-07-08 02:22:49.537 +02:00 [DBG] Connection id "0HNDTML19LCGT" completed keep alive response.
+2025-07-08 02:22:49.559 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7010/api/auth/secret - null null
+2025-07-08 02:22:49.565 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5184/api/auth/secret - 307 0 null 103.4234ms
+2025-07-08 02:22:49.570 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:22:49.657 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:22:49.665 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:22:49.680 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:22:49.686 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-08 02:22:49.691 +02:00 [DBG] Policy authentication schemes  did not succeed
+2025-07-08 02:22:49.694 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-07-08 02:22:49.698 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-07-08 02:22:49.704 +02:00 [INF] HTTP GET /api/auth/secret responded 401 in 18.1907 ms
+2025-07-08 02:22:49.709 +02:00 [DBG] Connection id "0HNDTML19LCGU" completed keep alive response.
+2025-07-08 02:22:49.713 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7010/api/auth/secret - 401 0 null 175.0498ms
+2025-07-08 02:23:47.777 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5184/api/auth/secret - null null
+2025-07-08 02:23:47.791 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:23:47.799 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:23:47.812 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:23:47.817 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:23:47.826 +02:00 [DBG] Redirecting to 'https://localhost:7010/api/auth/secret'.
+2025-07-08 02:23:47.841 +02:00 [INF] HTTP GET /api/auth/secret responded 307 in 14.9953 ms
+2025-07-08 02:23:47.876 +02:00 [DBG] Connection id "0HNDTML19LCGT" completed keep alive response.
+2025-07-08 02:23:47.887 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7010/api/auth/secret - null null
+2025-07-08 02:23:47.902 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5184/api/auth/secret - 307 0 null 185.3263ms
+2025-07-08 02:23:47.917 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:23:47.939 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:23:47.943 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:23:47.945 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:23:47.947 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-08 02:23:47.949 +02:00 [DBG] Policy authentication schemes  did not succeed
+2025-07-08 02:23:47.952 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-07-08 02:23:47.974 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-07-08 02:23:47.977 +02:00 [INF] HTTP GET /api/auth/secret responded 401 in 30.1489 ms
+2025-07-08 02:23:47.979 +02:00 [DBG] Connection id "0HNDTML19LCGU" completed keep alive response.
+2025-07-08 02:23:47.985 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7010/api/auth/secret - 401 0 null 103.2649ms
+2025-07-08 02:24:51.215 +02:00 [DBG] Connection id "0HNDTML19LCGT" received FIN.
+2025-07-08 02:24:51.225 +02:00 [DBG] Connection id "0HNDTML19LCGU" received FIN.
+2025-07-08 02:24:51.230 +02:00 [DBG] Connection id "0HNDTML19LCGT" disconnecting.
+2025-07-08 02:24:51.257 +02:00 [DBG] Connection id "0HNDTML19LCGU" disconnecting.
+2025-07-08 02:24:51.266 +02:00 [DBG] Connection id "0HNDTML19LCGT" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-08 02:24:51.268 +02:00 [DBG] Connection id "0HNDTML19LCGU" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-08 02:24:51.271 +02:00 [DBG] Connection id "0HNDTML19LCGT" stopped.
+2025-07-08 02:24:51.292 +02:00 [DBG] Connection id "0HNDTML19LCGU" stopped.
+2025-07-08 02:27:16.944 +02:00 [DBG] Connection id "0HNDTML19LCGV" accepted.
+2025-07-08 02:27:16.948 +02:00 [DBG] Connection id "0HNDTML19LCGV" received FIN.
+2025-07-08 02:27:16.991 +02:00 [DBG] Connection id "0HNDTML19LCGV" started.
+2025-07-08 02:27:16.991 +02:00 [DBG] Connection id "0HNDTML19LCH0" accepted.
+2025-07-08 02:27:17.025 +02:00 [DBG] Connection id "0HNDTML19LCH0" started.
+2025-07-08 02:27:17.032 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-07-08 02:27:17.045 +02:00 [DBG] Connection 0HNDTML19LCH0 established using the following protocol: "Tls13"
+2025-07-08 02:27:17.053 +02:00 [DBG] Connection id "0HNDTML19LCGV" stopped.
+2025-07-08 02:27:17.058 +02:00 [DBG] Connection id "0HNDTML19LCGV" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-08 02:27:17.060 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7010/api/Auth/login - application/json 53
+2025-07-08 02:27:17.072 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Auth/login'
+2025-07-08 02:27:17.080 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.Login (AuthApi)' with route pattern 'api/Auth/login' is valid for the request path '/api/Auth/login'
+2025-07-08 02:27:17.085 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.Login (AuthApi)'
+2025-07-08 02:27:17.087 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:27:17.141 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '28/06/2025 10:28:44', Current time (UTC): '08/07/2025 00:27:17'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-07-08 02:27:17.150 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '28/06/2025 10:28:44', Current time (UTC): '08/07/2025 00:27:17'.
+2025-07-08 02:27:17.152 +02:00 [INF] Executing endpoint 'AuthApi.Controllers.AuthController.Login (AuthApi)'
+2025-07-08 02:27:17.164 +02:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(AuthApi.Models.LoginRequest) on controller AuthApi.Controllers.AuthController (AuthApi).
+2025-07-08 02:27:17.169 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-08 02:27:17.180 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-08 02:27:17.183 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-08 02:27:17.192 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-08 02:27:17.194 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-08 02:27:17.196 +02:00 [DBG] Executing controller factory for controller AuthApi.Controllers.AuthController (AuthApi)
+2025-07-08 02:27:17.202 +02:00 [DBG] Executed controller factory for controller AuthApi.Controllers.AuthController (AuthApi)
+2025-07-08 02:27:17.209 +02:00 [DBG] Attempting to bind parameter 'request' of type 'AuthApi.Models.LoginRequest' ...
+2025-07-08 02:27:17.212 +02:00 [DBG] Attempting to bind parameter 'request' of type 'AuthApi.Models.LoginRequest' using the name '' in request data ...
+2025-07-08 02:27:17.214 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-07-08 02:27:17.225 +02:00 [DBG] Connection id "0HNDTML19LCH0", Request id "0HNDTML19LCH0:00000001": started reading request body.
+2025-07-08 02:27:17.227 +02:00 [DBG] Connection id "0HNDTML19LCH0", Request id "0HNDTML19LCH0:00000001": done reading request body.
+2025-07-08 02:27:17.229 +02:00 [DBG] JSON input formatter succeeded, deserializing to type 'AuthApi.Models.LoginRequest'
+2025-07-08 02:27:17.234 +02:00 [DBG] Done attempting to bind parameter 'request' of type 'AuthApi.Models.LoginRequest'.
+2025-07-08 02:27:17.237 +02:00 [DBG] Done attempting to bind parameter 'request' of type 'AuthApi.Models.LoginRequest'.
+2025-07-08 02:27:17.239 +02:00 [DBG] Attempting to validate the bound parameter 'request' of type 'AuthApi.Models.LoginRequest' ...
+2025-07-08 02:27:17.241 +02:00 [DBG] Done attempting to validate the bound parameter 'request' of type 'AuthApi.Models.LoginRequest'.
+2025-07-08 02:27:17.312 +02:00 [DBG] Entity Framework Core 9.0.6 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:9.0.6' with options: EngineType=SqlServer 
+2025-07-08 02:27:17.326 +02:00 [DBG] Creating DbConnection.
+2025-07-08 02:27:17.335 +02:00 [DBG] Created DbConnection. (9ms).
+2025-07-08 02:27:17.344 +02:00 [DBG] Opening connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:27:17.362 +02:00 [DBG] Opened connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:27:17.365 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-07-08 02:27:17.367 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-07-08 02:27:17.369 +02:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-07-08 02:27:17.372 +02:00 [DBG] Executing DbCommand [Parameters=[@__username_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[IsBlocked], [u].[PasswordHash], [u].[PasswordSalt], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2025-07-08 02:27:17.398 +02:00 [INF] Executed DbCommand (27ms) [Parameters=[@__username_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[IsBlocked], [u].[PasswordHash], [u].[PasswordSalt], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2025-07-08 02:27:17.410 +02:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:27:17.412 +02:00 [DBG] Closing data reader to 'AuthDb' on server 'machine'.
+2025-07-08 02:27:17.415 +02:00 [DBG] A data reader for 'AuthDb' on server 'machine' is being disposed after spending 5ms reading results.
+2025-07-08 02:27:17.417 +02:00 [DBG] Closing connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:27:17.420 +02:00 [DBG] Closed connection to database 'AuthDb' on server 'machine' (2ms).
+2025-07-08 02:27:17.426 +02:00 [DBG] 'DataContext' generated a temporary value for the property 'RefreshToken.Id'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:27:17.437 +02:00 [DBG] The navigation 'RefreshToken.User' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:27:17.459 +02:00 [DBG] Context 'DataContext' started tracking 'RefreshToken' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:27:17.463 +02:00 [DBG] SaveChanges starting for 'DataContext'.
+2025-07-08 02:27:17.465 +02:00 [DBG] DetectChanges starting for 'DataContext'.
+2025-07-08 02:27:17.470 +02:00 [DBG] DetectChanges completed for 'DataContext'.
+2025-07-08 02:27:17.477 +02:00 [DBG] Opening connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:27:17.479 +02:00 [DBG] Opened connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:27:17.481 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-07-08 02:27:17.490 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (8ms).
+2025-07-08 02:27:17.492 +02:00 [DBG] Initialized DbCommand for 'ExecuteReader' (11ms).
+2025-07-08 02:27:17.494 +02:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([Created], [Expires], [Revoked], [RevokedByIp], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-07-08 02:27:17.505 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([Created], [Expires], [Revoked], [RevokedByIp], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-07-08 02:27:17.510 +02:00 [DBG] The foreign key property 'RefreshToken.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2025-07-08 02:27:17.513 +02:00 [DBG] Closing data reader to 'AuthDb' on server 'machine'.
+2025-07-08 02:27:17.523 +02:00 [DBG] A data reader for 'AuthDb' on server 'machine' is being disposed after spending 13ms reading results.
+2025-07-08 02:27:17.526 +02:00 [DBG] Closing connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:27:17.532 +02:00 [DBG] Closed connection to database 'AuthDb' on server 'machine' (5ms).
+2025-07-08 02:27:17.536 +02:00 [DBG] An entity of type 'RefreshToken' tracked by 'DataContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:27:17.539 +02:00 [DBG] SaveChanges completed for 'DataContext' with 1 entities written to the database.
+2025-07-08 02:27:17.541 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-08 02:27:17.556 +02:00 [DBG] No information found on request to perform content negotiation.
+2025-07-08 02:27:17.557 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-08 02:27:17.558 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-08 02:27:17.564 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-08 02:27:17.569 +02:00 [INF] Executing OkObjectResult, writing value of type 'AuthApi.Models.TokenDto'.
+2025-07-08 02:27:17.571 +02:00 [INF] Executed action AuthApi.Controllers.AuthController.Login (AuthApi) in 375.4744ms
+2025-07-08 02:27:17.574 +02:00 [INF] Executed endpoint 'AuthApi.Controllers.AuthController.Login (AuthApi)'
+2025-07-08 02:27:17.580 +02:00 [INF] HTTP POST /api/Auth/login responded 200 in 491.6187 ms
+2025-07-08 02:27:17.584 +02:00 [DBG] Connection id "0HNDTML19LCH0" completed keep alive response.
+2025-07-08 02:27:17.586 +02:00 [DBG] 'DataContext' disposed.
+2025-07-08 02:27:17.589 +02:00 [DBG] Disposing connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:27:17.595 +02:00 [DBG] Disposed connection to database '' on server '' (6ms).
+2025-07-08 02:27:17.598 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7010/api/Auth/login - 200 null application/json; charset=utf-8 537.9615ms
+2025-07-08 02:27:38.695 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7010/api/Auth/secret - null null
+2025-07-08 02:27:38.717 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Auth/secret'
+2025-07-08 02:27:38.730 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/Auth/secret'
+2025-07-08 02:27:38.743 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:27:38.746 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:27:38.757 +02:00 [DBG] Successfully validated the token.
+2025-07-08 02:27:38.761 +02:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2025-07-08 02:27:38.764 +02:00 [DBG] Authorization was successful.
+2025-07-08 02:27:38.770 +02:00 [INF] Executing endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:27:38.775 +02:00 [INF] Route matched with {action = "GetSecret", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetSecret() on controller AuthApi.Controllers.AuthController (AuthApi).
+2025-07-08 02:27:38.782 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-08 02:27:38.787 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-08 02:27:38.797 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-08 02:27:38.805 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-08 02:27:38.807 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-08 02:27:38.809 +02:00 [DBG] Executing controller factory for controller AuthApi.Controllers.AuthController (AuthApi)
+2025-07-08 02:27:38.817 +02:00 [DBG] Executed controller factory for controller AuthApi.Controllers.AuthController (AuthApi)
+2025-07-08 02:27:38.819 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-08 02:27:38.822 +02:00 [DBG] No information found on request to perform content negotiation.
+2025-07-08 02:27:38.823 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-08 02:27:38.824 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-08 02:27:38.825 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2025-07-08 02:27:38.834 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-07-08 02:27:38.837 +02:00 [INF] Executed action AuthApi.Controllers.AuthController.GetSecret (AuthApi) in 27.9348ms
+2025-07-08 02:27:38.839 +02:00 [INF] Executed endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:27:38.840 +02:00 [INF] HTTP GET /api/Auth/secret responded 200 in 92.9163 ms
+2025-07-08 02:27:38.849 +02:00 [DBG] Connection id "0HNDTML19LCH0" completed keep alive response.
+2025-07-08 02:27:38.851 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7010/api/Auth/secret - 200 null text/plain; charset=utf-8 156.8192ms
+2025-07-08 02:27:56.147 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7010/api/Auth/secret - null null
+2025-07-08 02:27:56.162 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Auth/secret'
+2025-07-08 02:27:56.174 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/Auth/secret'
+2025-07-08 02:27:56.188 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:27:56.192 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:27:56.196 +02:00 [DBG] Successfully validated the token.
+2025-07-08 02:27:56.198 +02:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2025-07-08 02:27:56.202 +02:00 [DBG] Authorization was successful.
+2025-07-08 02:27:56.204 +02:00 [INF] Executing endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:27:56.207 +02:00 [INF] Route matched with {action = "GetSecret", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetSecret() on controller AuthApi.Controllers.AuthController (AuthApi).
+2025-07-08 02:27:56.221 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-08 02:27:56.241 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-08 02:27:56.255 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-08 02:27:56.258 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-08 02:27:56.263 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-08 02:27:56.268 +02:00 [DBG] Executing controller factory for controller AuthApi.Controllers.AuthController (AuthApi)
+2025-07-08 02:27:56.271 +02:00 [DBG] Executed controller factory for controller AuthApi.Controllers.AuthController (AuthApi)
+2025-07-08 02:27:56.273 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-08 02:27:56.277 +02:00 [DBG] No information found on request to perform content negotiation.
+2025-07-08 02:27:56.284 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-08 02:27:56.286 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-08 02:27:56.287 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2025-07-08 02:27:56.289 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-07-08 02:27:56.291 +02:00 [INF] Executed action AuthApi.Controllers.AuthController.GetSecret (AuthApi) in 22.1414ms
+2025-07-08 02:27:56.296 +02:00 [INF] Executed endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:27:56.297 +02:00 [INF] HTTP GET /api/Auth/secret responded 200 in 102.5578 ms
+2025-07-08 02:27:56.300 +02:00 [DBG] Connection id "0HNDTML19LCH0" completed keep alive response.
+2025-07-08 02:27:56.302 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7010/api/Auth/secret - 200 null text/plain; charset=utf-8 154.7759ms
+2025-07-08 02:28:22.421 +02:00 [DBG] Connection id "0HNDTML19LCH1" accepted.
+2025-07-08 02:28:22.434 +02:00 [DBG] Connection id "0HNDTML19LCH1" started.
+2025-07-08 02:28:22.450 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5184/api/auth/secret - null null
+2025-07-08 02:28:22.468 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:28:22.473 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:28:22.482 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:28:22.484 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:28:22.486 +02:00 [DBG] Redirecting to 'https://localhost:7010/api/auth/secret'.
+2025-07-08 02:28:22.489 +02:00 [INF] HTTP GET /api/auth/secret responded 307 in 3.3143 ms
+2025-07-08 02:28:22.525 +02:00 [DBG] Connection id "0HNDTML19LCH1" completed keep alive response.
+2025-07-08 02:28:22.528 +02:00 [DBG] Connection id "0HNDTML19LCH2" accepted.
+2025-07-08 02:28:22.548 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5184/api/auth/secret - 307 0 null 97.695ms
+2025-07-08 02:28:22.551 +02:00 [DBG] Connection id "0HNDTML19LCH2" started.
+2025-07-08 02:28:22.572 +02:00 [DBG] Connection 0HNDTML19LCH2 established using the following protocol: "Tls13"
+2025-07-08 02:28:22.583 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7010/api/auth/secret - null null
+2025-07-08 02:28:22.610 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:28:22.615 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:28:22.629 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:28:22.640 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:28:22.643 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-08 02:28:22.647 +02:00 [DBG] Policy authentication schemes  did not succeed
+2025-07-08 02:28:22.653 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-07-08 02:28:22.656 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-07-08 02:28:22.660 +02:00 [INF] HTTP GET /api/auth/secret responded 401 in 16.8684 ms
+2025-07-08 02:28:22.674 +02:00 [DBG] Connection id "0HNDTML19LCH2" completed keep alive response.
+2025-07-08 02:28:22.683 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7010/api/auth/secret - 401 0 null 100.0385ms
+2025-07-08 02:28:30.140 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5184/api/auth/secret - null null
+2025-07-08 02:28:30.155 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:28:30.161 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:28:30.167 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:28:30.171 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:28:30.174 +02:00 [DBG] Redirecting to 'https://localhost:7010/api/auth/secret'.
+2025-07-08 02:28:30.187 +02:00 [INF] HTTP GET /api/auth/secret responded 307 in 12.7899 ms
+2025-07-08 02:28:30.217 +02:00 [DBG] Connection id "0HNDTML19LCH1" completed keep alive response.
+2025-07-08 02:28:30.218 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7010/api/auth/secret - null null
+2025-07-08 02:28:30.232 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5184/api/auth/secret - 307 0 null 91.8854ms
+2025-07-08 02:28:30.270 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:28:30.341 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:28:30.360 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:28:30.364 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:28:30.372 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-08 02:28:30.380 +02:00 [DBG] Policy authentication schemes  did not succeed
+2025-07-08 02:28:30.396 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-07-08 02:28:30.409 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-07-08 02:28:30.419 +02:00 [INF] HTTP GET /api/auth/secret responded 401 in 46.5461 ms
+2025-07-08 02:28:30.422 +02:00 [DBG] Connection id "0HNDTML19LCH2" completed keep alive response.
+2025-07-08 02:28:30.424 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7010/api/auth/secret - 401 0 null 206.5319ms
+2025-07-08 02:29:03.645 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5184/api/auth/secret - null null
+2025-07-08 02:29:03.691 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:29:03.701 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:29:03.710 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:29:03.716 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:29:03.719 +02:00 [DBG] Redirecting to 'https://localhost:7010/api/auth/secret'.
+2025-07-08 02:29:03.730 +02:00 [INF] HTTP GET /api/auth/secret responded 307 in 11.0192 ms
+2025-07-08 02:29:03.746 +02:00 [DBG] Connection id "0HNDTML19LCH1" completed keep alive response.
+2025-07-08 02:29:03.773 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7010/api/auth/secret - null null
+2025-07-08 02:29:03.788 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5184/api/auth/secret - 307 0 null 180.8266ms
+2025-07-08 02:29:03.799 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:29:03.812 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:29:03.815 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:29:03.818 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:29:03.826 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-08 02:29:03.828 +02:00 [DBG] Policy authentication schemes  did not succeed
+2025-07-08 02:29:03.830 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-07-08 02:29:03.831 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-07-08 02:29:03.843 +02:00 [INF] HTTP GET /api/auth/secret responded 401 in 17.3966 ms
+2025-07-08 02:29:03.847 +02:00 [DBG] Connection id "0HNDTML19LCH2" completed keep alive response.
+2025-07-08 02:29:03.857 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7010/api/auth/secret - 401 0 null 109.8313ms
+2025-07-08 02:30:07.493 +02:00 [DBG] Connection id "0HNDTML19LCH1" received FIN.
+2025-07-08 02:30:07.497 +02:00 [DBG] Connection id "0HNDTML19LCH2" received FIN.
+2025-07-08 02:30:07.509 +02:00 [DBG] Connection id "0HNDTML19LCH1" disconnecting.
+2025-07-08 02:30:07.557 +02:00 [DBG] Connection id "0HNDTML19LCH2" disconnecting.
+2025-07-08 02:30:07.566 +02:00 [DBG] Connection id "0HNDTML19LCH1" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-08 02:30:07.569 +02:00 [DBG] Connection id "0HNDTML19LCH2" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-08 02:30:07.592 +02:00 [DBG] Connection id "0HNDTML19LCH1" stopped.
+2025-07-08 02:30:07.593 +02:00 [DBG] Connection id "0HNDTML19LCH2" stopped.
+2025-07-08 02:31:03.657 +02:00 [DBG] Connection id "0HNDTML19LCH3" accepted.
+2025-07-08 02:31:03.660 +02:00 [DBG] Connection id "0HNDTML19LCH3" started.
+2025-07-08 02:31:03.666 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5184/api/auth/secret - null null
+2025-07-08 02:31:03.689 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:31:03.706 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:31:03.732 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:31:03.736 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:31:03.740 +02:00 [DBG] Redirecting to 'https://localhost:7010/api/auth/secret'.
+2025-07-08 02:31:03.754 +02:00 [INF] HTTP GET /api/auth/secret responded 307 in 14.2692 ms
+2025-07-08 02:31:03.781 +02:00 [DBG] Connection id "0HNDTML19LCH3" completed keep alive response.
+2025-07-08 02:31:03.796 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5184/api/auth/secret - 307 0 null 130.0637ms
+2025-07-08 02:31:03.785 +02:00 [DBG] Connection id "0HNDTML19LCH4" accepted.
+2025-07-08 02:31:03.818 +02:00 [DBG] Connection id "0HNDTML19LCH4" started.
+2025-07-08 02:31:03.831 +02:00 [DBG] Connection 0HNDTML19LCH4 established using the following protocol: "Tls13"
+2025-07-08 02:31:03.844 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7010/api/auth/secret - null null
+2025-07-08 02:31:03.858 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:31:03.864 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:31:03.875 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:31:03.879 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:31:03.887 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-08 02:31:03.890 +02:00 [DBG] Policy authentication schemes  did not succeed
+2025-07-08 02:31:03.899 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-07-08 02:31:03.915 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-07-08 02:31:03.935 +02:00 [INF] HTTP GET /api/auth/secret responded 401 in 48.1495 ms
+2025-07-08 02:31:03.948 +02:00 [DBG] Connection id "0HNDTML19LCH4" completed keep alive response.
+2025-07-08 02:31:03.957 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7010/api/auth/secret - 401 0 null 113.7493ms
+2025-07-08 02:31:54.232 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5184/api/auth/secret - null null
+2025-07-08 02:31:54.256 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:31:54.265 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:31:54.269 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:31:54.271 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:31:54.273 +02:00 [DBG] Redirecting to 'https://localhost:7010/api/auth/secret'.
+2025-07-08 02:31:54.283 +02:00 [INF] HTTP GET /api/auth/secret responded 307 in 9.5482 ms
+2025-07-08 02:31:54.298 +02:00 [DBG] Connection id "0HNDTML19LCH3" completed keep alive response.
+2025-07-08 02:31:54.300 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7010/api/auth/secret - null null
+2025-07-08 02:31:54.313 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5184/api/auth/secret - 307 0 null 80.831ms
+2025-07-08 02:31:54.327 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:31:54.348 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:31:54.359 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:31:54.365 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:31:54.372 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-08 02:31:54.376 +02:00 [DBG] Policy authentication schemes  did not succeed
+2025-07-08 02:31:54.380 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-07-08 02:31:54.387 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-07-08 02:31:54.392 +02:00 [INF] HTTP GET /api/auth/secret responded 401 in 20.0954 ms
+2025-07-08 02:31:54.398 +02:00 [DBG] Connection id "0HNDTML19LCH4" completed keep alive response.
+2025-07-08 02:31:54.402 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7010/api/auth/secret - 401 0 null 102.3662ms
+2025-07-08 02:32:09.194 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5184/api/auth/admin-data - null null
+2025-07-08 02:32:09.212 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/admin-data'
+2025-07-08 02:32:09.216 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetAdminData (AuthApi)' with route pattern 'api/Auth/admin-data' is valid for the request path '/api/auth/admin-data'
+2025-07-08 02:32:09.222 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetAdminData (AuthApi)'
+2025-07-08 02:32:09.233 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:32:09.243 +02:00 [DBG] Redirecting to 'https://localhost:7010/api/auth/admin-data'.
+2025-07-08 02:32:09.248 +02:00 [INF] HTTP GET /api/auth/admin-data responded 307 in 4.6410 ms
+2025-07-08 02:32:09.257 +02:00 [DBG] Connection id "0HNDTML19LCH3" completed keep alive response.
+2025-07-08 02:32:09.259 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7010/api/auth/admin-data - null null
+2025-07-08 02:32:09.259 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5184/api/auth/admin-data - 307 0 null 65.6816ms
+2025-07-08 02:32:09.263 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/admin-data'
+2025-07-08 02:32:09.277 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetAdminData (AuthApi)' with route pattern 'api/Auth/admin-data' is valid for the request path '/api/auth/admin-data'
+2025-07-08 02:32:09.280 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetAdminData (AuthApi)'
+2025-07-08 02:32:09.282 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:32:09.284 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-08 02:32:09.293 +02:00 [DBG] Policy authentication schemes  did not succeed
+2025-07-08 02:32:09.296 +02:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2025-07-08 02:32:09.297 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-07-08 02:32:09.304 +02:00 [INF] HTTP GET /api/auth/admin-data responded 401 in 19.7758 ms
+2025-07-08 02:32:09.311 +02:00 [DBG] Connection id "0HNDTML19LCH4" completed keep alive response.
+2025-07-08 02:32:09.313 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7010/api/auth/admin-data - 401 0 null 53.9982ms
+2025-07-08 02:32:19.626 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5184/api/auth/refresh - application/json 114
+2025-07-08 02:32:19.641 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/refresh'
+2025-07-08 02:32:19.644 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.Refresh (AuthApi)' with route pattern 'api/Auth/refresh' is valid for the request path '/api/auth/refresh'
+2025-07-08 02:32:19.648 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.Refresh (AuthApi)'
+2025-07-08 02:32:19.650 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:32:19.654 +02:00 [DBG] Redirecting to 'https://localhost:7010/api/auth/refresh'.
+2025-07-08 02:32:19.663 +02:00 [INF] HTTP POST /api/auth/refresh responded 307 in 9.2317 ms
+2025-07-08 02:32:19.669 +02:00 [DBG] Connection id "0HNDTML19LCH3" completed keep alive response.
+2025-07-08 02:32:19.670 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7010/api/auth/refresh - application/json 114
+2025-07-08 02:32:19.677 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5184/api/auth/refresh - 307 0 null 51.5284ms
+2025-07-08 02:32:19.690 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/refresh'
+2025-07-08 02:32:19.697 +02:00 [DBG] Connection id "0HNDTML19LCH3", Request id "0HNDTML19LCH3:00000004": started reading request body.
+2025-07-08 02:32:19.708 +02:00 [DBG] Connection id "0HNDTML19LCH3", Request id "0HNDTML19LCH3:00000004": done reading request body.
+2025-07-08 02:32:19.705 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.Refresh (AuthApi)' with route pattern 'api/Auth/refresh' is valid for the request path '/api/auth/refresh'
+2025-07-08 02:32:19.719 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.Refresh (AuthApi)'
+2025-07-08 02:32:19.721 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:32:19.723 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-08 02:32:19.726 +02:00 [INF] Executing endpoint 'AuthApi.Controllers.AuthController.Refresh (AuthApi)'
+2025-07-08 02:32:19.733 +02:00 [INF] Route matched with {action = "Refresh", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Refresh(AuthApi.Models.RefreshRequest) on controller AuthApi.Controllers.AuthController (AuthApi).
+2025-07-08 02:32:19.743 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-08 02:32:19.754 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-08 02:32:19.764 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-08 02:32:19.771 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-08 02:32:19.781 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-08 02:32:19.790 +02:00 [DBG] Executing controller factory for controller AuthApi.Controllers.AuthController (AuthApi)
+2025-07-08 02:32:19.798 +02:00 [DBG] Executed controller factory for controller AuthApi.Controllers.AuthController (AuthApi)
+2025-07-08 02:32:19.804 +02:00 [DBG] Attempting to bind parameter 'request' of type 'AuthApi.Models.RefreshRequest' ...
+2025-07-08 02:32:19.816 +02:00 [DBG] Attempting to bind parameter 'request' of type 'AuthApi.Models.RefreshRequest' using the name '' in request data ...
+2025-07-08 02:32:19.826 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-07-08 02:32:19.843 +02:00 [DBG] Connection id "0HNDTML19LCH4", Request id "0HNDTML19LCH4:00000004": started reading request body.
+2025-07-08 02:32:19.860 +02:00 [DBG] Connection id "0HNDTML19LCH4", Request id "0HNDTML19LCH4:00000004": done reading request body.
+2025-07-08 02:32:19.867 +02:00 [DBG] JSON input formatter succeeded, deserializing to type 'AuthApi.Models.RefreshRequest'
+2025-07-08 02:32:19.875 +02:00 [DBG] Done attempting to bind parameter 'request' of type 'AuthApi.Models.RefreshRequest'.
+2025-07-08 02:32:19.881 +02:00 [DBG] Done attempting to bind parameter 'request' of type 'AuthApi.Models.RefreshRequest'.
+2025-07-08 02:32:19.892 +02:00 [DBG] Attempting to validate the bound parameter 'request' of type 'AuthApi.Models.RefreshRequest' ...
+2025-07-08 02:32:19.902 +02:00 [DBG] Done attempting to validate the bound parameter 'request' of type 'AuthApi.Models.RefreshRequest'.
+2025-07-08 02:32:22.872 +02:00 [DBG] Entity Framework Core 9.0.6 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:9.0.6' with options: EngineType=SqlServer 
+2025-07-08 02:32:22.884 +02:00 [DBG] Compiling query expression: 
+'DbSet<RefreshToken>()
+    .Include(x => x.User)
+    .SingleOrDefault(rt => rt.Token == __token_0)'
+2025-07-08 02:32:22.904 +02:00 [DBG] Including navigation: 'RefreshToken.User'.
+2025-07-08 02:32:22.990 +02:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<RefreshToken>(
+    asyncEnumerable: SingleQueryingEnumerable.Create<RefreshToken>(
+        relationalQueryContext: (RelationalQueryContext)queryContext, 
+        relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+            Client Projections:
+                0 -> Dictionary<IProperty, int> { [Property: RefreshToken.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: RefreshToken.Created (DateTime) Required, 1], [Property: RefreshToken.Expires (DateTime) Required, 2], [Property: RefreshToken.Revoked (DateTime?), 3], [Property: RefreshToken.RevokedByIp (string), 4], [Property: RefreshToken.Token (string) Required Index MaxLength(256), 5], [Property: RefreshToken.UserId (int) Required FK Index, 6] }
+                1 -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 7], [Property: User.IsBlocked (bool) Required ValueGenerated.OnAdd, 8], [Property: User.PasswordHash (byte[]) Required, 9], [Property: User.PasswordSalt (byte[]) Required, 10], [Property: User.Role (string) Required, 11], [Property: User.Username (string) Required Index MaxLength(50), 12] }
+            SELECT TOP(2) r.Id, r.Created, r.Expires, r.Revoked, r.RevokedByIp, r.Token, r.UserId, u.Id, u.IsBlocked, u.PasswordHash, u.PasswordSalt, u.Role, u.Username
+            FROM RefreshTokens AS r
+            INNER JOIN Users AS u ON r.UserId == u.Id
+            WHERE r.Token == @__token_0) | Resolver: c => new RelationalCommandCache(
+            c.Dependencies.MemoryCache, 
+            c.RelationalDependencies.QuerySqlGeneratorFactory, 
+            c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+            Client Projections:
+                0 -> Dictionary<IProperty, int> { [Property: RefreshToken.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: RefreshToken.Created (DateTime) Required, 1], [Property: RefreshToken.Expires (DateTime) Required, 2], [Property: RefreshToken.Revoked (DateTime?), 3], [Property: RefreshToken.RevokedByIp (string), 4], [Property: RefreshToken.Token (string) Required Index MaxLength(256), 5], [Property: RefreshToken.UserId (int) Required FK Index, 6] }
+                1 -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 7], [Property: User.IsBlocked (bool) Required ValueGenerated.OnAdd, 8], [Property: User.PasswordHash (byte[]) Required, 9], [Property: User.PasswordSalt (byte[]) Required, 10], [Property: User.Role (string) Required, 11], [Property: User.Username (string) Required Index MaxLength(50), 12] }
+            SELECT TOP(2) r.Id, r.Created, r.Expires, r.Revoked, r.RevokedByIp, r.Token, r.UserId, u.Id, u.IsBlocked, u.PasswordHash, u.PasswordSalt, u.Role, u.Username
+            FROM RefreshTokens AS r
+            INNER JOIN Users AS u ON r.UserId == u.Id
+            WHERE r.Token == @__token_0, 
+            False, 
+            new HashSet<string>(
+                new string[]{ }, 
+                StringComparer.Ordinal
+            )
+        )].GetRelationalCommandTemplate(parameters), 
+        readerColumns: [LIFTABLE Constant: ReaderColumn[] { ReaderColumn<int>, ReaderColumn<DateTime>, ReaderColumn<DateTime>, ReaderColumn<DateTime>, ReaderColumn<object>, ReaderColumn<object>, ReaderColumn<int>, ReaderColumn<int>, ReaderColumn<bool>, ReaderColumn<object>, ReaderColumn<object>, ReaderColumn<object>, ReaderColumn<object> } | Resolver: namelessParameter{0} => new ReaderColumn[]
+        { 
+            new ReaderColumn<int>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken").FindProperty("Id"), 
+                (dataReader, indexMap) => dataReader.GetInt32(0)
+            ), 
+            new ReaderColumn<DateTime>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken").FindProperty("Created"), 
+                (dataReader, indexMap) => dataReader.GetDateTime(1)
+            ), 
+            new ReaderColumn<DateTime>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken").FindProperty("Expires"), 
+                (dataReader, indexMap) => dataReader.GetDateTime(2)
+            ), 
+            new ReaderColumn<DateTime>(
+                True, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken").FindProperty("Revoked"), 
+                (dataReader, indexMap) => dataReader.GetDateTime(3)
+            ), 
+            new ReaderColumn<object>(
+                True, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken").FindProperty("RevokedByIp"), 
+                (dataReader, indexMap) => (object)dataReader.GetString(4)
+            ), 
+            new ReaderColumn<object>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken").FindProperty("Token"), 
+                (dataReader, indexMap) => (object)dataReader.GetString(5)
+            ), 
+            new ReaderColumn<int>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken").FindProperty("UserId"), 
+                (dataReader, indexMap) => dataReader.GetInt32(6)
+            ), 
+            new ReaderColumn<int>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("Id"), 
+                (dataReader, indexMap) => dataReader.GetInt32(7)
+            ), 
+            new ReaderColumn<bool>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("IsBlocked"), 
+                (dataReader, indexMap) => dataReader.GetBoolean(8)
+            ), 
+            new ReaderColumn<object>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("PasswordHash"), 
+                (dataReader, indexMap) => (object)dataReader.GetFieldValue<byte[]>(9)
+            ), 
+            new ReaderColumn<object>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("PasswordSalt"), 
+                (dataReader, indexMap) => (object)dataReader.GetFieldValue<byte[]>(10)
+            ), 
+            new ReaderColumn<object>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("Role"), 
+                (dataReader, indexMap) => (object)dataReader.GetString(11)
+            ), 
+            new ReaderColumn<object>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("Username"), 
+                (dataReader, indexMap) => (object)dataReader.GetString(12)
+            ) 
+        }], 
+        shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+        {
+            RefreshToken entity;
+            User entity;
+            entity = 
+            {
+                MaterializationContext materializationContext1;
+                IEntityType entityType1;
+                RefreshToken instance1;
+                InternalEntityEntry entry1;
+                bool hasNullKey1;
+                materializationContext1 = new MaterializationContext(
+                    [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                    queryContext.Context
+                );
+                instance1 = default(RefreshToken);
+                entry1 = queryContext.TryGetEntry(
+                    key: [LIFTABLE Constant: Key: RefreshToken.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken").FindPrimaryKey()], 
+                    keyValues: new object[]{ (object)dataReader.GetInt32(0) }, 
+                    throwOnNullKey: True, 
+                    hasNullKey: hasNullKey1);
+                !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+                {
+                    entityType1 = entry1.EntityType;
+                    return instance1 = (RefreshToken)entry1.Entity;
+                } : 
+                {
+                    ISnapshot shadowSnapshot1;
+                    shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                    entityType1 = [LIFTABLE Constant: EntityType: RefreshToken | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken")];
+                    instance1 = switch (entityType1)
+                    {
+                        case [LIFTABLE Constant: EntityType: RefreshToken | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken")]: 
+                            {
+                                return 
+                                {
+                                    RefreshToken instance;
+                                    instance = new RefreshToken();
+                                    instance.<Id>k__BackingField = dataReader.GetInt32(0);
+                                    instance.<Created>k__BackingField = dataReader.GetDateTime(1);
+                                    instance.<Expires>k__BackingField = dataReader.GetDateTime(2);
+                                    instance.<Revoked>k__BackingField = dataReader.IsDBNull(3) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(3);
+                                    instance.<RevokedByIp>k__BackingField = dataReader.IsDBNull(4) ? default(string) : (string)dataReader.GetFieldValue<object>(4);
+                                    instance.<Token>k__BackingField = (string)dataReader.GetFieldValue<object>(5);
+                                    instance.<UserId>k__BackingField = dataReader.GetInt32(6);
+                                    (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                        context: materializationContext1.Context, 
+                                        entity: instance, 
+                                        queryTrackingBehavior: TrackAll, 
+                                        structuralType: [LIFTABLE Constant: EntityType: RefreshToken | Resolver: namelessParameter{3} => namelessParameter{3}.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken")]) : default(void);
+                                    return instance;
+                                }}
+                        default: 
+                            default(RefreshToken)
+                    }
+                    ;
+                    entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                        entityType: entityType1, 
+                        entity: instance1, 
+                        snapshot: shadowSnapshot1);
+                    return instance1;
+                } : default(void);
+                return instance1;
+            };
+            entity = 
+            {
+                MaterializationContext materializationContext2;
+                IEntityType entityType2;
+                User instance2;
+                InternalEntityEntry entry2;
+                bool hasNullKey2;
+                materializationContext2 = new MaterializationContext(
+                    [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                    queryContext.Context
+                );
+                instance2 = default(User);
+                entry2 = queryContext.TryGetEntry(
+                    key: [LIFTABLE Constant: Key: User.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindPrimaryKey()], 
+                    keyValues: new object[]{ (object)dataReader.GetInt32(7) }, 
+                    throwOnNullKey: True, 
+                    hasNullKey: hasNullKey2);
+                !(hasNullKey2) ? entry2 != default(InternalEntityEntry) ? 
+                {
+                    entityType2 = entry2.EntityType;
+                    return instance2 = (User)entry2.Entity;
+                } : 
+                {
+                    ISnapshot shadowSnapshot2;
+                    shadowSnapshot2 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                    entityType2 = [LIFTABLE Constant: EntityType: User | Resolver: namelessParameter{4} => namelessParameter{4}.Dependencies.Model.FindEntityType("AuthApi.Models.User")];
+                    instance2 = switch (entityType2)
+                    {
+                        case [LIFTABLE Constant: EntityType: User | Resolver: namelessParameter{5} => namelessParameter{5}.Dependencies.Model.FindEntityType("AuthApi.Models.User")]: 
+                            {
+                                return 
+                                {
+                                    User instance;
+                                    instance = new User();
+                                    instance.<Id>k__BackingField = dataReader.GetInt32(7);
+                                    instance.<IsBlocked>k__BackingField = dataReader.GetBoolean(8);
+                                    instance.<PasswordHash>k__BackingField = (byte[])dataReader.GetFieldValue<object>(9);
+                                    instance.<PasswordSalt>k__BackingField = (byte[])dataReader.GetFieldValue<object>(10);
+                                    instance.<Role>k__BackingField = (string)dataReader.GetFieldValue<object>(11);
+                                    instance.<Username>k__BackingField = (string)dataReader.GetFieldValue<object>(12);
+                                    (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                        context: materializationContext2.Context, 
+                                        entity: instance, 
+                                        queryTrackingBehavior: TrackAll, 
+                                        structuralType: [LIFTABLE Constant: EntityType: User | Resolver: namelessParameter{6} => namelessParameter{6}.Dependencies.Model.FindEntityType("AuthApi.Models.User")]) : default(void);
+                                    return instance;
+                                }}
+                        default: 
+                            default(User)
+                    }
+                    ;
+                    entry2 = entityType2 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                        entityType: entityType2, 
+                        entity: instance2, 
+                        snapshot: shadowSnapshot2);
+                    return instance2;
+                } : default(void);
+                return instance2;
+            };
+            ShaperProcessingExpressionVisitor.IncludeReference<RefreshToken, RefreshToken, User>(
+                queryContext: queryContext, 
+                entity: entity, 
+                relatedEntity: entity, 
+                navigation: [LIFTABLE Constant: Navigation: RefreshToken.User (User) ToPrincipal User Inverse: RefreshTokens | Resolver: namelessParameter{7} => namelessParameter{7}.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken").FindNavigation("User")], 
+                inverseNavigation: [LIFTABLE Constant: Navigation: User.RefreshTokens (List<RefreshToken>) Collection ToDependent RefreshToken Inverse: User | Resolver: namelessParameter{8} => namelessParameter{8}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindNavigation("RefreshTokens")], 
+                fixup: (namelessParameter{9}, namelessParameter{10}) => 
+                {
+                    namelessParameter{9}.<User>k__BackingField = namelessParameter{10};
+                    return [LIFTABLE Constant: ClrICollectionAccessor<User, List<RefreshToken>, RefreshToken> | Resolver: namelessParameter{11} => namelessParameter{11}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindNavigation("RefreshTokens").GetCollectionAccessor()].Add(
+                        entity: namelessParameter{10}, 
+                        value: namelessParameter{9}, 
+                        forMaterialization: True);
+                }, 
+                trackingQuery: True);
+            return entity;
+        }, 
+        contextType: AuthApi.Data.DataContext, 
+        standAloneStateManager: False, 
+        detailedErrorsEnabled: False, 
+        threadSafetyChecksEnabled: True), 
+    cancellationToken: queryContext.CancellationToken)'
+2025-07-08 02:32:23.023 +02:00 [DBG] Creating DbConnection.
+2025-07-08 02:32:23.036 +02:00 [DBG] Created DbConnection. (12ms).
+2025-07-08 02:32:23.053 +02:00 [DBG] Opening connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:32:23.065 +02:00 [DBG] Opened connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:32:23.088 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-07-08 02:32:23.101 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (13ms).
+2025-07-08 02:32:23.115 +02:00 [DBG] Initialized DbCommand for 'ExecuteReader' (27ms).
+2025-07-08 02:32:23.119 +02:00 [DBG] Executing DbCommand [Parameters=[@__token_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[Created], [r].[Expires], [r].[Revoked], [r].[RevokedByIp], [r].[Token], [r].[UserId], [u].[Id], [u].[IsBlocked], [u].[PasswordHash], [u].[PasswordSalt], [u].[Role], [u].[Username]
+FROM [RefreshTokens] AS [r]
+INNER JOIN [Users] AS [u] ON [r].[UserId] = [u].[Id]
+WHERE [r].[Token] = @__token_0
+2025-07-08 02:32:23.159 +02:00 [INF] Executed DbCommand (40ms) [Parameters=[@__token_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[Created], [r].[Expires], [r].[Revoked], [r].[RevokedByIp], [r].[Token], [r].[UserId], [u].[Id], [u].[IsBlocked], [u].[PasswordHash], [u].[PasswordSalt], [u].[Role], [u].[Username]
+FROM [RefreshTokens] AS [r]
+INNER JOIN [Users] AS [u] ON [r].[UserId] = [u].[Id]
+WHERE [r].[Token] = @__token_0
+2025-07-08 02:32:23.170 +02:00 [DBG] Context 'DataContext' started tracking 'RefreshToken' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:32:23.178 +02:00 [DBG] The navigation 'RefreshToken.User' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:32:23.182 +02:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:32:23.193 +02:00 [DBG] Closing data reader to 'AuthDb' on server 'machine'.
+2025-07-08 02:32:23.196 +02:00 [DBG] A data reader for 'AuthDb' on server 'machine' is being disposed after spending 26ms reading results.
+2025-07-08 02:32:23.203 +02:00 [DBG] Closing connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:32:23.206 +02:00 [DBG] Closed connection to database 'AuthDb' on server 'machine' (3ms).
+2025-07-08 02:32:23.210 +02:00 [DBG] 'DataContext' generated a temporary value for the property 'RefreshToken.Id'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:32:23.213 +02:00 [DBG] The navigation 'RefreshToken.User' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:32:23.216 +02:00 [DBG] Context 'DataContext' started tracking 'RefreshToken' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:32:23.220 +02:00 [DBG] SaveChanges starting for 'DataContext'.
+2025-07-08 02:32:23.221 +02:00 [DBG] DetectChanges starting for 'DataContext'.
+2025-07-08 02:32:23.225 +02:00 [DBG] The unchanged property 'RefreshToken.Revoked' was detected as changed and will be marked as modified. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2025-07-08 02:32:23.227 +02:00 [DBG] An entity of type 'RefreshToken' tracked by 'DataContext' changed state from '"Unchanged"' to '"Modified"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:32:23.231 +02:00 [DBG] The unchanged property 'RefreshToken.RevokedByIp' was detected as changed and will be marked as modified. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2025-07-08 02:32:23.233 +02:00 [DBG] DetectChanges completed for 'DataContext'.
+2025-07-08 02:32:23.240 +02:00 [DBG] Executing 2 update commands as a batch.
+2025-07-08 02:32:23.244 +02:00 [DBG] Opening connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:32:23.249 +02:00 [DBG] Opened connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:32:23.254 +02:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2025-07-08 02:32:23.264 +02:00 [DBG] Began transaction with isolation level 'ReadCommitted'.
+2025-07-08 02:32:23.270 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-07-08 02:32:23.273 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (2ms).
+2025-07-08 02:32:23.276 +02:00 [DBG] Initialized DbCommand for 'ExecuteReader' (5ms).
+2025-07-08 02:32:23.286 +02:00 [DBG] Executing DbCommand [Parameters=[@p2='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 256), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [RefreshTokens] SET [Revoked] = @p0, [RevokedByIp] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+INSERT INTO [RefreshTokens] ([Created], [Expires], [Revoked], [RevokedByIp], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p3, @p4, @p5, @p6, @p7, @p8);
+2025-07-08 02:32:23.311 +02:00 [INF] Executed DbCommand (25ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 256), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [RefreshTokens] SET [Revoked] = @p0, [RevokedByIp] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+INSERT INTO [RefreshTokens] ([Created], [Expires], [Revoked], [RevokedByIp], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p3, @p4, @p5, @p6, @p7, @p8);
+2025-07-08 02:32:23.319 +02:00 [DBG] The foreign key property 'RefreshToken.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2025-07-08 02:32:23.326 +02:00 [DBG] Closing data reader to 'AuthDb' on server 'machine'.
+2025-07-08 02:32:23.329 +02:00 [DBG] A data reader for 'AuthDb' on server 'machine' is being disposed after spending 10ms reading results.
+2025-07-08 02:32:23.335 +02:00 [DBG] Committing transaction.
+2025-07-08 02:32:23.343 +02:00 [DBG] Committed transaction.
+2025-07-08 02:32:23.347 +02:00 [DBG] Closing connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:32:23.350 +02:00 [DBG] Closed connection to database 'AuthDb' on server 'machine' (2ms).
+2025-07-08 02:32:23.355 +02:00 [DBG] Disposing transaction.
+2025-07-08 02:32:23.361 +02:00 [DBG] An entity of type 'RefreshToken' tracked by 'DataContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:32:23.369 +02:00 [DBG] An entity of type 'RefreshToken' tracked by 'DataContext' changed state from '"Modified"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:32:23.389 +02:00 [DBG] SaveChanges completed for 'DataContext' with 2 entities written to the database.
+2025-07-08 02:32:23.394 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-08 02:32:23.411 +02:00 [DBG] No information found on request to perform content negotiation.
+2025-07-08 02:32:23.414 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-08 02:32:23.421 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-08 02:32:23.424 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-08 02:32:23.429 +02:00 [INF] Executing OkObjectResult, writing value of type 'AuthApi.Models.TokenDto'.
+2025-07-08 02:32:23.440 +02:00 [INF] Executed action AuthApi.Controllers.AuthController.Refresh (AuthApi) in 3650.8432ms
+2025-07-08 02:32:23.449 +02:00 [INF] Executed endpoint 'AuthApi.Controllers.AuthController.Refresh (AuthApi)'
+2025-07-08 02:32:23.454 +02:00 [INF] HTTP POST /api/auth/refresh responded 200 in 3731.5553 ms
+2025-07-08 02:32:23.462 +02:00 [DBG] Connection id "0HNDTML19LCH4" completed keep alive response.
+2025-07-08 02:32:23.469 +02:00 [DBG] 'DataContext' disposed.
+2025-07-08 02:32:23.473 +02:00 [DBG] Disposing connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:32:23.478 +02:00 [DBG] Disposed connection to database '' on server '' (5ms).
+2025-07-08 02:32:23.485 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7010/api/auth/refresh - 200 null application/json; charset=utf-8 3815.1521ms
+2025-07-08 02:33:13.822 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5184/api/auth/secret - null null
+2025-07-08 02:33:13.844 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:33:13.849 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:33:13.864 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:33:13.868 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:33:13.872 +02:00 [DBG] Redirecting to 'https://localhost:7010/api/auth/secret'.
+2025-07-08 02:33:13.875 +02:00 [INF] HTTP GET /api/auth/secret responded 307 in 3.3970 ms
+2025-07-08 02:33:13.879 +02:00 [DBG] Connection id "0HNDTML19LCH3" completed keep alive response.
+2025-07-08 02:33:13.881 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7010/api/auth/secret - null null
+2025-07-08 02:33:13.889 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5184/api/auth/secret - 307 0 null 67.0383ms
+2025-07-08 02:33:13.896 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:33:13.932 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:33:13.940 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:33:13.945 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:33:13.946 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-08 02:33:13.948 +02:00 [DBG] Policy authentication schemes  did not succeed
+2025-07-08 02:33:13.954 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-07-08 02:33:13.959 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-07-08 02:33:13.960 +02:00 [INF] HTTP GET /api/auth/secret responded 401 in 14.1060 ms
+2025-07-08 02:33:13.963 +02:00 [DBG] Connection id "0HNDTML19LCH4" completed keep alive response.
+2025-07-08 02:33:13.973 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7010/api/auth/secret - 401 0 null 92.1274ms
+2025-07-08 02:33:16.389 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5184/api/auth/admin-data - null null
+2025-07-08 02:33:16.404 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/admin-data'
+2025-07-08 02:33:16.407 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetAdminData (AuthApi)' with route pattern 'api/Auth/admin-data' is valid for the request path '/api/auth/admin-data'
+2025-07-08 02:33:16.416 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetAdminData (AuthApi)'
+2025-07-08 02:33:16.419 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:33:16.421 +02:00 [DBG] Redirecting to 'https://localhost:7010/api/auth/admin-data'.
+2025-07-08 02:33:16.426 +02:00 [INF] HTTP GET /api/auth/admin-data responded 307 in 5.7654 ms
+2025-07-08 02:33:16.437 +02:00 [DBG] Connection id "0HNDTML19LCH3" completed keep alive response.
+2025-07-08 02:33:16.438 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7010/api/auth/admin-data - null null
+2025-07-08 02:33:16.447 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5184/api/auth/admin-data - 307 0 null 58.1512ms
+2025-07-08 02:33:16.452 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/admin-data'
+2025-07-08 02:33:16.464 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetAdminData (AuthApi)' with route pattern 'api/Auth/admin-data' is valid for the request path '/api/auth/admin-data'
+2025-07-08 02:33:16.466 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetAdminData (AuthApi)'
+2025-07-08 02:33:16.468 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:33:16.471 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-08 02:33:16.478 +02:00 [DBG] Policy authentication schemes  did not succeed
+2025-07-08 02:33:16.480 +02:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2025-07-08 02:33:16.481 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-07-08 02:33:16.483 +02:00 [INF] HTTP GET /api/auth/admin-data responded 401 in 12.4451 ms
+2025-07-08 02:33:16.491 +02:00 [DBG] Connection id "0HNDTML19LCH4" completed keep alive response.
+2025-07-08 02:33:16.493 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7010/api/auth/admin-data - 401 0 null 54.625ms
+2025-07-08 02:34:18.717 +02:00 [DBG] Connection id "0HNDTML19LCH3" received FIN.
+2025-07-08 02:34:18.726 +02:00 [DBG] Connection id "0HNDTML19LCH4" received FIN.
+2025-07-08 02:34:18.749 +02:00 [DBG] Connection id "0HNDTML19LCH3" disconnecting.
+2025-07-08 02:34:18.767 +02:00 [DBG] Connection id "0HNDTML19LCH4" disconnecting.
+2025-07-08 02:34:18.780 +02:00 [DBG] Connection id "0HNDTML19LCH3" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-08 02:34:18.782 +02:00 [DBG] Connection id "0HNDTML19LCH4" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-08 02:34:18.804 +02:00 [DBG] Connection id "0HNDTML19LCH3" stopped.
+2025-07-08 02:34:18.833 +02:00 [DBG] Connection id "0HNDTML19LCH4" stopped.
+2025-07-08 02:35:22.289 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-07-08 02:35:22.422 +02:00 [DBG] Hosting starting
+2025-07-08 02:35:22.480 +02:00 [INF] User profile is available. Using 'C:\Users\roswe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-07-08 02:35:22.511 +02:00 [DBG] Reading data from file 'C:\Users\roswe\AppData\Local\ASP.NET\DataProtection-Keys\key-73041f8c-a61f-4811-8fa3-a792c5f82e10.xml'.
+2025-07-08 02:35:22.532 +02:00 [DBG] Reading data from file 'C:\Users\roswe\AppData\Local\ASP.NET\DataProtection-Keys\key-adc15277-1c96-4eca-989b-83e26291598e.xml'.
+2025-07-08 02:35:22.547 +02:00 [DBG] Found key {73041f8c-a61f-4811-8fa3-a792c5f82e10}.
+2025-07-08 02:35:22.568 +02:00 [DBG] Found key {adc15277-1c96-4eca-989b-83e26291598e}.
+2025-07-08 02:35:22.583 +02:00 [DBG] Considering key {adc15277-1c96-4eca-989b-83e26291598e} with expiration date 2025-07-19 12:16:03Z as default key.
+2025-07-08 02:35:22.595 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-07-08 02:35:22.608 +02:00 [DBG] Decrypting secret element using Windows DPAPI.
+2025-07-08 02:35:22.621 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-07-08 02:35:22.629 +02:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2025-07-08 02:35:22.640 +02:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2025-07-08 02:35:22.651 +02:00 [DBG] Using key {adc15277-1c96-4eca-989b-83e26291598e} as the default key.
+2025-07-08 02:35:22.657 +02:00 [DBG] Key ring with default key {adc15277-1c96-4eca-989b-83e26291598e} was loaded during application startup.
+2025-07-08 02:35:22.666 +02:00 [DBG] Middleware loaded
+2025-07-08 02:35:22.672 +02:00 [DBG] Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (16499 B).
+2025-07-08 02:35:22.674 +02:00 [DBG] Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+2025-07-08 02:35:22.848 +02:00 [DBG] Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True}
+2025-07-08 02:35:22.860 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-07-08 02:35:22.879 +02:00 [DBG] Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+2025-07-08 02:35:23.029 +02:00 [INF] Now listening on: https://localhost:7010
+2025-07-08 02:35:23.038 +02:00 [INF] Now listening on: http://localhost:5184
+2025-07-08 02:35:23.044 +02:00 [DBG] Loaded hosting startup assembly AuthApi
+2025-07-08 02:35:23.049 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-07-08 02:35:23.053 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-07-08 02:35:23.056 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-07-08 02:35:23.073 +02:00 [DBG] Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-07-08 02:35:23.086 +02:00 [DBG] Executing API description provider 'DefaultApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-07-08 02:35:23.140 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-08 02:35:23.141 +02:00 [INF] Hosting environment: Development
+2025-07-08 02:35:23.143 +02:00 [INF] Content root path: C:\Projects\.net-core_API-Authentication\AuthApi
+2025-07-08 02:35:23.145 +02:00 [DBG] Hosting started
+2025-07-08 02:35:43.408 +02:00 [DBG] Connection id "0HNDTMTFMOHRR" accepted.
+2025-07-08 02:35:43.430 +02:00 [DBG] Connection id "0HNDTMTFMOHRR" started.
+2025-07-08 02:35:43.458 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken, Int32 estimatedSize)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-07-08 02:35:43.477 +02:00 [DBG] Connection id "0HNDTMTFMOHRR" stopped.
+2025-07-08 02:35:43.480 +02:00 [DBG] Connection id "0HNDTMTFMOHRR" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-08 02:35:43.494 +02:00 [DBG] Connection id "0HNDTMTFMOHRS" accepted.
+2025-07-08 02:35:43.497 +02:00 [DBG] Connection id "0HNDTMTFMOHRS" started.
+2025-07-08 02:35:43.506 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken, Int32 estimatedSize)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-07-08 02:35:43.510 +02:00 [DBG] Connection id "0HNDTMTFMOHRS" stopped.
+2025-07-08 02:35:43.517 +02:00 [DBG] Connection id "0HNDTMTFMOHRS" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-08 02:35:43.525 +02:00 [DBG] Connection id "0HNDTMTFMOHRT" accepted.
+2025-07-08 02:35:43.538 +02:00 [DBG] Connection id "0HNDTMTFMOHRT" started.
+2025-07-08 02:35:43.549 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken, Int32 estimatedSize)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-07-08 02:35:43.564 +02:00 [DBG] Connection id "0HNDTMTFMOHRT" stopped.
+2025-07-08 02:35:43.582 +02:00 [DBG] Connection id "0HNDTMTFMOHRT" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-08 02:35:43.588 +02:00 [DBG] Connection id "0HNDTMTFMOHRU" accepted.
+2025-07-08 02:35:43.595 +02:00 [DBG] Connection id "0HNDTMTFMOHRU" started.
+2025-07-08 02:35:43.598 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken, Int32 estimatedSize)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-07-08 02:35:43.608 +02:00 [DBG] Connection id "0HNDTMTFMOHRU" stopped.
+2025-07-08 02:35:43.609 +02:00 [DBG] Connection id "0HNDTMTFMOHRU" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-08 02:36:16.712 +02:00 [DBG] Connection id "0HNDTMTFMOHRV" accepted.
+2025-07-08 02:36:16.764 +02:00 [DBG] Connection id "0HNDTMTFMOHRV" started.
+2025-07-08 02:36:16.772 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken, Int32 estimatedSize)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-07-08 02:36:16.786 +02:00 [DBG] Connection id "0HNDTMTFMOHRV" stopped.
+2025-07-08 02:36:16.788 +02:00 [DBG] Connection id "0HNDTMTFMOHRV" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-08 02:36:16.801 +02:00 [DBG] Connection id "0HNDTMTFMOHS0" accepted.
+2025-07-08 02:36:16.803 +02:00 [DBG] Connection id "0HNDTMTFMOHS0" started.
+2025-07-08 02:36:16.806 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken, Int32 estimatedSize)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-07-08 02:36:16.846 +02:00 [DBG] Connection id "0HNDTMTFMOHS0" stopped.
+2025-07-08 02:36:16.849 +02:00 [DBG] Connection id "0HNDTMTFMOHS0" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-08 02:36:16.853 +02:00 [DBG] Connection id "0HNDTMTFMOHS1" accepted.
+2025-07-08 02:36:16.856 +02:00 [DBG] Connection id "0HNDTMTFMOHS1" started.
+2025-07-08 02:36:16.860 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken, Int32 estimatedSize)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-07-08 02:36:16.864 +02:00 [DBG] Connection id "0HNDTMTFMOHS1" stopped.
+2025-07-08 02:36:16.866 +02:00 [DBG] Connection id "0HNDTMTFMOHS1" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-08 02:36:16.876 +02:00 [DBG] Connection id "0HNDTMTFMOHS2" accepted.
+2025-07-08 02:36:16.890 +02:00 [DBG] Connection id "0HNDTMTFMOHS2" started.
+2025-07-08 02:36:16.896 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken, Int32 estimatedSize)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-07-08 02:36:16.899 +02:00 [DBG] Connection id "0HNDTMTFMOHS2" stopped.
+2025-07-08 02:36:16.909 +02:00 [DBG] Connection id "0HNDTMTFMOHS2" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-08 02:36:31.480 +02:00 [DBG] Connection id "0HNDTMTFMOHS3" accepted.
+2025-07-08 02:36:31.485 +02:00 [DBG] Connection id "0HNDTMTFMOHS3" started.
+2025-07-08 02:36:31.490 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken, Int32 estimatedSize)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-07-08 02:36:31.503 +02:00 [DBG] Connection id "0HNDTMTFMOHS3" stopped.
+2025-07-08 02:36:31.505 +02:00 [DBG] Connection id "0HNDTMTFMOHS3" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-08 02:36:31.511 +02:00 [DBG] Connection id "0HNDTMTFMOHS4" accepted.
+2025-07-08 02:36:31.517 +02:00 [DBG] Connection id "0HNDTMTFMOHS4" started.
+2025-07-08 02:36:31.520 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken, Int32 estimatedSize)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-07-08 02:36:31.526 +02:00 [DBG] Connection id "0HNDTMTFMOHS4" stopped.
+2025-07-08 02:36:31.529 +02:00 [DBG] Connection id "0HNDTMTFMOHS4" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-08 02:36:31.534 +02:00 [DBG] Connection id "0HNDTMTFMOHS5" accepted.
+2025-07-08 02:36:31.550 +02:00 [DBG] Connection id "0HNDTMTFMOHS5" started.
+2025-07-08 02:36:31.553 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken, Int32 estimatedSize)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-07-08 02:36:31.574 +02:00 [DBG] Connection id "0HNDTMTFMOHS5" stopped.
+2025-07-08 02:36:31.595 +02:00 [DBG] Connection id "0HNDTMTFMOHS5" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-08 02:36:31.601 +02:00 [DBG] Connection id "0HNDTMTFMOHS6" accepted.
+2025-07-08 02:36:31.609 +02:00 [DBG] Connection id "0HNDTMTFMOHS6" started.
+2025-07-08 02:36:31.613 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken, Int32 estimatedSize)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-07-08 02:36:31.633 +02:00 [DBG] Connection id "0HNDTMTFMOHS6" stopped.
+2025-07-08 02:36:31.635 +02:00 [DBG] Connection id "0HNDTMTFMOHS6" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-08 02:37:30.300 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-07-08 02:37:30.466 +02:00 [DBG] Hosting starting
+2025-07-08 02:37:30.505 +02:00 [INF] User profile is available. Using 'C:\Users\roswe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-07-08 02:37:30.529 +02:00 [DBG] Reading data from file 'C:\Users\roswe\AppData\Local\ASP.NET\DataProtection-Keys\key-73041f8c-a61f-4811-8fa3-a792c5f82e10.xml'.
+2025-07-08 02:37:30.552 +02:00 [DBG] Reading data from file 'C:\Users\roswe\AppData\Local\ASP.NET\DataProtection-Keys\key-adc15277-1c96-4eca-989b-83e26291598e.xml'.
+2025-07-08 02:37:30.568 +02:00 [DBG] Found key {73041f8c-a61f-4811-8fa3-a792c5f82e10}.
+2025-07-08 02:37:30.586 +02:00 [DBG] Found key {adc15277-1c96-4eca-989b-83e26291598e}.
+2025-07-08 02:37:30.595 +02:00 [DBG] Considering key {adc15277-1c96-4eca-989b-83e26291598e} with expiration date 2025-07-19 12:16:03Z as default key.
+2025-07-08 02:37:30.602 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-07-08 02:37:30.606 +02:00 [DBG] Decrypting secret element using Windows DPAPI.
+2025-07-08 02:37:30.610 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-07-08 02:37:30.613 +02:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2025-07-08 02:37:30.616 +02:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2025-07-08 02:37:30.619 +02:00 [DBG] Using key {adc15277-1c96-4eca-989b-83e26291598e} as the default key.
+2025-07-08 02:37:30.621 +02:00 [DBG] Key ring with default key {adc15277-1c96-4eca-989b-83e26291598e} was loaded during application startup.
+2025-07-08 02:37:30.635 +02:00 [DBG] Middleware loaded
+2025-07-08 02:37:30.642 +02:00 [DBG] Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (16499 B).
+2025-07-08 02:37:30.666 +02:00 [DBG] Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+2025-07-08 02:37:30.800 +02:00 [DBG] Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True}
+2025-07-08 02:37:30.806 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-07-08 02:37:30.828 +02:00 [DBG] Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+2025-07-08 02:37:30.963 +02:00 [INF] Now listening on: https://localhost:7010
+2025-07-08 02:37:30.967 +02:00 [INF] Now listening on: http://localhost:5184
+2025-07-08 02:37:30.969 +02:00 [DBG] Loaded hosting startup assembly AuthApi
+2025-07-08 02:37:30.970 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-07-08 02:37:30.972 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-07-08 02:37:30.981 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-07-08 02:37:30.996 +02:00 [DBG] Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-07-08 02:37:30.998 +02:00 [DBG] Executing API description provider 'DefaultApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-07-08 02:37:31.048 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-08 02:37:31.051 +02:00 [INF] Hosting environment: Development
+2025-07-08 02:37:31.053 +02:00 [INF] Content root path: C:\Projects\.net-core_API-Authentication\AuthApi
+2025-07-08 02:37:31.063 +02:00 [DBG] Hosting started
+2025-07-08 02:37:46.597 +02:00 [DBG] Connection id "0HNDTMUKDIS3E" accepted.
+2025-07-08 02:37:46.613 +02:00 [DBG] Connection id "0HNDTMUKDIS3E" started.
+2025-07-08 02:37:46.663 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5184/api/auth/secret - null null
+2025-07-08 02:37:46.720 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:37:46.735 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:37:46.747 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:37:46.777 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:37:46.788 +02:00 [DBG] Https port '7010' loaded from configuration.
+2025-07-08 02:37:46.797 +02:00 [DBG] Redirecting to 'https://localhost:7010/api/auth/secret'.
+2025-07-08 02:37:46.808 +02:00 [INF] HTTP GET /api/auth/secret responded 307 in 22.5570 ms
+2025-07-08 02:37:46.825 +02:00 [DBG] Connection id "0HNDTMUKDIS3E" completed keep alive response.
+2025-07-08 02:37:46.828 +02:00 [DBG] Connection id "0HNDTMUKDIS3F" accepted.
+2025-07-08 02:37:46.846 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5184/api/auth/secret - 307 0 null 190.7489ms
+2025-07-08 02:37:46.851 +02:00 [DBG] Connection id "0HNDTMUKDIS3F" started.
+2025-07-08 02:37:46.953 +02:00 [DBG] Connection 0HNDTMUKDIS3F established using the following protocol: "Tls13"
+2025-07-08 02:37:46.978 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7010/api/auth/secret - null null
+2025-07-08 02:37:46.999 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:37:47.013 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:37:47.017 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:37:47.022 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:37:47.090 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-08 02:37:47.109 +02:00 [DBG] Policy authentication schemes  did not succeed
+2025-07-08 02:37:47.119 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-07-08 02:37:47.127 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-07-08 02:37:47.135 +02:00 [INF] HTTP GET /api/auth/secret responded 401 in 106.4849 ms
+2025-07-08 02:37:47.154 +02:00 [DBG] Connection id "0HNDTMUKDIS3F" completed keep alive response.
+2025-07-08 02:37:47.163 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7010/api/auth/secret - 401 0 null 185.9044ms
+2025-07-08 02:37:58.068 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5184/api/auth/secret - null null
+2025-07-08 02:37:58.074 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:37:58.077 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:37:58.081 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:37:58.085 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:37:58.087 +02:00 [DBG] Redirecting to 'https://localhost:7010/api/auth/secret'.
+2025-07-08 02:37:58.089 +02:00 [INF] HTTP GET /api/auth/secret responded 307 in 2.4998 ms
+2025-07-08 02:37:58.098 +02:00 [DBG] Connection id "0HNDTMUKDIS3E" completed keep alive response.
+2025-07-08 02:37:58.102 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7010/api/auth/secret - null null
+2025-07-08 02:37:58.102 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5184/api/auth/secret - 307 0 null 34.8572ms
+2025-07-08 02:37:58.114 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:37:58.126 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:37:58.135 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:37:58.137 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:37:58.151 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-08 02:37:58.154 +02:00 [DBG] Policy authentication schemes  did not succeed
+2025-07-08 02:37:58.163 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-07-08 02:37:58.173 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-07-08 02:37:58.183 +02:00 [INF] HTTP GET /api/auth/secret responded 401 in 36.5105 ms
+2025-07-08 02:37:58.193 +02:00 [DBG] Connection id "0HNDTMUKDIS3F" completed keep alive response.
+2025-07-08 02:37:58.196 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7010/api/auth/secret - 401 0 null 94.4484ms
+2025-07-08 02:38:43.818 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-07-08 02:38:43.971 +02:00 [DBG] Hosting starting
+2025-07-08 02:38:44.028 +02:00 [INF] User profile is available. Using 'C:\Users\roswe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-07-08 02:38:44.044 +02:00 [DBG] Reading data from file 'C:\Users\roswe\AppData\Local\ASP.NET\DataProtection-Keys\key-73041f8c-a61f-4811-8fa3-a792c5f82e10.xml'.
+2025-07-08 02:38:44.052 +02:00 [DBG] Reading data from file 'C:\Users\roswe\AppData\Local\ASP.NET\DataProtection-Keys\key-adc15277-1c96-4eca-989b-83e26291598e.xml'.
+2025-07-08 02:38:44.061 +02:00 [DBG] Found key {73041f8c-a61f-4811-8fa3-a792c5f82e10}.
+2025-07-08 02:38:44.070 +02:00 [DBG] Found key {adc15277-1c96-4eca-989b-83e26291598e}.
+2025-07-08 02:38:44.084 +02:00 [DBG] Considering key {adc15277-1c96-4eca-989b-83e26291598e} with expiration date 2025-07-19 12:16:03Z as default key.
+2025-07-08 02:38:44.096 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-07-08 02:38:44.104 +02:00 [DBG] Decrypting secret element using Windows DPAPI.
+2025-07-08 02:38:44.107 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-07-08 02:38:44.112 +02:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2025-07-08 02:38:44.121 +02:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2025-07-08 02:38:44.145 +02:00 [DBG] Using key {adc15277-1c96-4eca-989b-83e26291598e} as the default key.
+2025-07-08 02:38:44.156 +02:00 [DBG] Key ring with default key {adc15277-1c96-4eca-989b-83e26291598e} was loaded during application startup.
+2025-07-08 02:38:44.168 +02:00 [DBG] Middleware loaded
+2025-07-08 02:38:44.177 +02:00 [DBG] Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (16499 B).
+2025-07-08 02:38:44.181 +02:00 [DBG] Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+2025-07-08 02:38:44.306 +02:00 [DBG] Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True}
+2025-07-08 02:38:44.319 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-07-08 02:38:44.343 +02:00 [DBG] Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+2025-07-08 02:38:44.477 +02:00 [INF] Now listening on: https://localhost:7010
+2025-07-08 02:38:44.486 +02:00 [INF] Now listening on: http://localhost:5184
+2025-07-08 02:38:44.489 +02:00 [DBG] Loaded hosting startup assembly AuthApi
+2025-07-08 02:38:44.495 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-07-08 02:38:44.506 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-07-08 02:38:44.511 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-07-08 02:38:44.530 +02:00 [DBG] Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-07-08 02:38:44.542 +02:00 [DBG] Executing API description provider 'DefaultApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-07-08 02:38:44.597 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-08 02:38:44.604 +02:00 [INF] Hosting environment: Development
+2025-07-08 02:38:44.606 +02:00 [INF] Content root path: C:\Projects\.net-core_API-Authentication\AuthApi
+2025-07-08 02:38:44.619 +02:00 [DBG] Hosting started
+2025-07-08 02:38:58.772 +02:00 [DBG] Connection id "0HNDTMV9TT4F4" accepted.
+2025-07-08 02:38:58.788 +02:00 [DBG] Connection id "0HNDTMV9TT4F4" started.
+2025-07-08 02:38:58.860 +02:00 [DBG] Connection 0HNDTMV9TT4F4 established using the following protocol: "Tls13"
+2025-07-08 02:38:58.908 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7010/api/auth/secret - null null
+2025-07-08 02:38:58.957 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/secret'
+2025-07-08 02:38:58.977 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)' with route pattern 'api/Auth/secret' is valid for the request path '/api/auth/secret'
+2025-07-08 02:38:58.999 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:38:59.035 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:38:59.192 +02:00 [DBG] Successfully validated the token.
+2025-07-08 02:38:59.201 +02:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2025-07-08 02:38:59.224 +02:00 [DBG] Authorization was successful.
+2025-07-08 02:39:01.490 +02:00 [INF] Executing endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:39:01.510 +02:00 [INF] Route matched with {action = "GetSecret", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetSecret() on controller AuthApi.Controllers.AuthController (AuthApi).
+2025-07-08 02:39:01.532 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-08 02:39:01.548 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-08 02:39:01.559 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-08 02:39:01.563 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-08 02:39:01.575 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-08 02:39:01.580 +02:00 [DBG] Executing controller factory for controller AuthApi.Controllers.AuthController (AuthApi)
+2025-07-08 02:39:01.749 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-07-08 02:39:01.778 +02:00 [DBG] Executed controller factory for controller AuthApi.Controllers.AuthController (AuthApi)
+2025-07-08 02:39:01.786 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-08 02:39:01.797 +02:00 [DBG] Attempting to select an output formatter based on Accept header '["application/json"]'.
+2025-07-08 02:39:01.800 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-08 02:39:01.804 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-07-08 02:39:01.825 +02:00 [INF] Executed action AuthApi.Controllers.AuthController.GetSecret (AuthApi) in 243.3411ms
+2025-07-08 02:39:01.841 +02:00 [INF] Executed endpoint 'AuthApi.Controllers.AuthController.GetSecret (AuthApi)'
+2025-07-08 02:39:01.849 +02:00 [INF] HTTP GET /api/auth/secret responded 200 in 2801.4382 ms
+2025-07-08 02:39:01.868 +02:00 [DBG] Connection id "0HNDTMV9TT4F4" completed keep alive response.
+2025-07-08 02:39:01.883 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7010/api/auth/secret - 200 null application/json; charset=utf-8 2982.1998ms
+2025-07-08 02:39:21.148 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7010/api/auth/refresh - application/json 114
+2025-07-08 02:39:21.177 +02:00 [DBG] 1 candidate(s) found for the request path '/api/auth/refresh'
+2025-07-08 02:39:21.197 +02:00 [DBG] Endpoint 'AuthApi.Controllers.AuthController.Refresh (AuthApi)' with route pattern 'api/Auth/refresh' is valid for the request path '/api/auth/refresh'
+2025-07-08 02:39:21.223 +02:00 [DBG] Request matched endpoint 'AuthApi.Controllers.AuthController.Refresh (AuthApi)'
+2025-07-08 02:39:21.229 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-08 02:39:21.285 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-08 02:39:24.142 +02:00 [INF] Executing endpoint 'AuthApi.Controllers.AuthController.Refresh (AuthApi)'
+2025-07-08 02:39:24.167 +02:00 [INF] Route matched with {action = "Refresh", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Refresh(AuthApi.Models.RefreshRequest) on controller AuthApi.Controllers.AuthController (AuthApi).
+2025-07-08 02:39:24.173 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-08 02:39:24.184 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-08 02:39:24.189 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-08 02:39:24.207 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-08 02:39:24.220 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-08 02:39:24.235 +02:00 [DBG] Executing controller factory for controller AuthApi.Controllers.AuthController (AuthApi)
+2025-07-08 02:39:24.247 +02:00 [DBG] Executed controller factory for controller AuthApi.Controllers.AuthController (AuthApi)
+2025-07-08 02:39:24.254 +02:00 [DBG] Attempting to bind parameter 'request' of type 'AuthApi.Models.RefreshRequest' ...
+2025-07-08 02:39:24.266 +02:00 [DBG] Attempting to bind parameter 'request' of type 'AuthApi.Models.RefreshRequest' using the name '' in request data ...
+2025-07-08 02:39:24.270 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-07-08 02:39:24.286 +02:00 [DBG] Connection id "0HNDTMV9TT4F4", Request id "0HNDTMV9TT4F4:00000002": started reading request body.
+2025-07-08 02:39:24.296 +02:00 [DBG] Connection id "0HNDTMV9TT4F4", Request id "0HNDTMV9TT4F4:00000002": done reading request body.
+2025-07-08 02:39:24.304 +02:00 [DBG] JSON input formatter succeeded, deserializing to type 'AuthApi.Models.RefreshRequest'
+2025-07-08 02:39:24.313 +02:00 [DBG] Done attempting to bind parameter 'request' of type 'AuthApi.Models.RefreshRequest'.
+2025-07-08 02:39:24.317 +02:00 [DBG] Done attempting to bind parameter 'request' of type 'AuthApi.Models.RefreshRequest'.
+2025-07-08 02:39:24.327 +02:00 [DBG] Attempting to validate the bound parameter 'request' of type 'AuthApi.Models.RefreshRequest' ...
+2025-07-08 02:39:24.338 +02:00 [DBG] Done attempting to validate the bound parameter 'request' of type 'AuthApi.Models.RefreshRequest'.
+2025-07-08 02:39:26.451 +02:00 [DBG] Entity Framework Core 9.0.6 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:9.0.6' with options: EngineType=SqlServer 
+2025-07-08 02:39:26.660 +02:00 [DBG] Compiling query expression: 
+'DbSet<RefreshToken>()
+    .Include(x => x.User)
+    .SingleOrDefault(rt => rt.Token == __token_0)'
+2025-07-08 02:39:26.744 +02:00 [DBG] Including navigation: 'RefreshToken.User'.
+2025-07-08 02:39:27.113 +02:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<RefreshToken>(
+    asyncEnumerable: SingleQueryingEnumerable.Create<RefreshToken>(
+        relationalQueryContext: (RelationalQueryContext)queryContext, 
+        relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+            Client Projections:
+                0 -> Dictionary<IProperty, int> { [Property: RefreshToken.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: RefreshToken.Created (DateTime) Required, 1], [Property: RefreshToken.Expires (DateTime) Required, 2], [Property: RefreshToken.Revoked (DateTime?), 3], [Property: RefreshToken.RevokedByIp (string), 4], [Property: RefreshToken.Token (string) Required Index MaxLength(256), 5], [Property: RefreshToken.UserId (int) Required FK Index, 6] }
+                1 -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 7], [Property: User.IsBlocked (bool) Required ValueGenerated.OnAdd, 8], [Property: User.PasswordHash (byte[]) Required, 9], [Property: User.PasswordSalt (byte[]) Required, 10], [Property: User.Role (string) Required, 11], [Property: User.Username (string) Required Index MaxLength(50), 12] }
+            SELECT TOP(2) r.Id, r.Created, r.Expires, r.Revoked, r.RevokedByIp, r.Token, r.UserId, u.Id, u.IsBlocked, u.PasswordHash, u.PasswordSalt, u.Role, u.Username
+            FROM RefreshTokens AS r
+            INNER JOIN Users AS u ON r.UserId == u.Id
+            WHERE r.Token == @__token_0) | Resolver: c => new RelationalCommandCache(
+            c.Dependencies.MemoryCache, 
+            c.RelationalDependencies.QuerySqlGeneratorFactory, 
+            c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+            Client Projections:
+                0 -> Dictionary<IProperty, int> { [Property: RefreshToken.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: RefreshToken.Created (DateTime) Required, 1], [Property: RefreshToken.Expires (DateTime) Required, 2], [Property: RefreshToken.Revoked (DateTime?), 3], [Property: RefreshToken.RevokedByIp (string), 4], [Property: RefreshToken.Token (string) Required Index MaxLength(256), 5], [Property: RefreshToken.UserId (int) Required FK Index, 6] }
+                1 -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 7], [Property: User.IsBlocked (bool) Required ValueGenerated.OnAdd, 8], [Property: User.PasswordHash (byte[]) Required, 9], [Property: User.PasswordSalt (byte[]) Required, 10], [Property: User.Role (string) Required, 11], [Property: User.Username (string) Required Index MaxLength(50), 12] }
+            SELECT TOP(2) r.Id, r.Created, r.Expires, r.Revoked, r.RevokedByIp, r.Token, r.UserId, u.Id, u.IsBlocked, u.PasswordHash, u.PasswordSalt, u.Role, u.Username
+            FROM RefreshTokens AS r
+            INNER JOIN Users AS u ON r.UserId == u.Id
+            WHERE r.Token == @__token_0, 
+            False, 
+            new HashSet<string>(
+                new string[]{ }, 
+                StringComparer.Ordinal
+            )
+        )].GetRelationalCommandTemplate(parameters), 
+        readerColumns: [LIFTABLE Constant: ReaderColumn[] { ReaderColumn<int>, ReaderColumn<DateTime>, ReaderColumn<DateTime>, ReaderColumn<DateTime>, ReaderColumn<object>, ReaderColumn<object>, ReaderColumn<int>, ReaderColumn<int>, ReaderColumn<bool>, ReaderColumn<object>, ReaderColumn<object>, ReaderColumn<object>, ReaderColumn<object> } | Resolver: namelessParameter{0} => new ReaderColumn[]
+        { 
+            new ReaderColumn<int>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken").FindProperty("Id"), 
+                (dataReader, indexMap) => dataReader.GetInt32(0)
+            ), 
+            new ReaderColumn<DateTime>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken").FindProperty("Created"), 
+                (dataReader, indexMap) => dataReader.GetDateTime(1)
+            ), 
+            new ReaderColumn<DateTime>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken").FindProperty("Expires"), 
+                (dataReader, indexMap) => dataReader.GetDateTime(2)
+            ), 
+            new ReaderColumn<DateTime>(
+                True, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken").FindProperty("Revoked"), 
+                (dataReader, indexMap) => dataReader.GetDateTime(3)
+            ), 
+            new ReaderColumn<object>(
+                True, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken").FindProperty("RevokedByIp"), 
+                (dataReader, indexMap) => (object)dataReader.GetString(4)
+            ), 
+            new ReaderColumn<object>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken").FindProperty("Token"), 
+                (dataReader, indexMap) => (object)dataReader.GetString(5)
+            ), 
+            new ReaderColumn<int>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken").FindProperty("UserId"), 
+                (dataReader, indexMap) => dataReader.GetInt32(6)
+            ), 
+            new ReaderColumn<int>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("Id"), 
+                (dataReader, indexMap) => dataReader.GetInt32(7)
+            ), 
+            new ReaderColumn<bool>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("IsBlocked"), 
+                (dataReader, indexMap) => dataReader.GetBoolean(8)
+            ), 
+            new ReaderColumn<object>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("PasswordHash"), 
+                (dataReader, indexMap) => (object)dataReader.GetFieldValue<byte[]>(9)
+            ), 
+            new ReaderColumn<object>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("PasswordSalt"), 
+                (dataReader, indexMap) => (object)dataReader.GetFieldValue<byte[]>(10)
+            ), 
+            new ReaderColumn<object>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("Role"), 
+                (dataReader, indexMap) => (object)dataReader.GetString(11)
+            ), 
+            new ReaderColumn<object>(
+                False, 
+                null, 
+                namelessParameter{0}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindProperty("Username"), 
+                (dataReader, indexMap) => (object)dataReader.GetString(12)
+            ) 
+        }], 
+        shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+        {
+            RefreshToken entity;
+            User entity;
+            entity = 
+            {
+                MaterializationContext materializationContext1;
+                IEntityType entityType1;
+                RefreshToken instance1;
+                InternalEntityEntry entry1;
+                bool hasNullKey1;
+                materializationContext1 = new MaterializationContext(
+                    [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                    queryContext.Context
+                );
+                instance1 = default(RefreshToken);
+                entry1 = queryContext.TryGetEntry(
+                    key: [LIFTABLE Constant: Key: RefreshToken.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken").FindPrimaryKey()], 
+                    keyValues: new object[]{ (object)dataReader.GetInt32(0) }, 
+                    throwOnNullKey: True, 
+                    hasNullKey: hasNullKey1);
+                !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+                {
+                    entityType1 = entry1.EntityType;
+                    return instance1 = (RefreshToken)entry1.Entity;
+                } : 
+                {
+                    ISnapshot shadowSnapshot1;
+                    shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                    entityType1 = [LIFTABLE Constant: EntityType: RefreshToken | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken")];
+                    instance1 = switch (entityType1)
+                    {
+                        case [LIFTABLE Constant: EntityType: RefreshToken | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken")]: 
+                            {
+                                return 
+                                {
+                                    RefreshToken instance;
+                                    instance = new RefreshToken();
+                                    instance.<Id>k__BackingField = dataReader.GetInt32(0);
+                                    instance.<Created>k__BackingField = dataReader.GetDateTime(1);
+                                    instance.<Expires>k__BackingField = dataReader.GetDateTime(2);
+                                    instance.<Revoked>k__BackingField = dataReader.IsDBNull(3) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(3);
+                                    instance.<RevokedByIp>k__BackingField = dataReader.IsDBNull(4) ? default(string) : (string)dataReader.GetFieldValue<object>(4);
+                                    instance.<Token>k__BackingField = (string)dataReader.GetFieldValue<object>(5);
+                                    instance.<UserId>k__BackingField = dataReader.GetInt32(6);
+                                    (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                        context: materializationContext1.Context, 
+                                        entity: instance, 
+                                        queryTrackingBehavior: TrackAll, 
+                                        structuralType: [LIFTABLE Constant: EntityType: RefreshToken | Resolver: namelessParameter{3} => namelessParameter{3}.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken")]) : default(void);
+                                    return instance;
+                                }}
+                        default: 
+                            default(RefreshToken)
+                    }
+                    ;
+                    entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                        entityType: entityType1, 
+                        entity: instance1, 
+                        snapshot: shadowSnapshot1);
+                    return instance1;
+                } : default(void);
+                return instance1;
+            };
+            entity = 
+            {
+                MaterializationContext materializationContext2;
+                IEntityType entityType2;
+                User instance2;
+                InternalEntityEntry entry2;
+                bool hasNullKey2;
+                materializationContext2 = new MaterializationContext(
+                    [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                    queryContext.Context
+                );
+                instance2 = default(User);
+                entry2 = queryContext.TryGetEntry(
+                    key: [LIFTABLE Constant: Key: User.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindPrimaryKey()], 
+                    keyValues: new object[]{ (object)dataReader.GetInt32(7) }, 
+                    throwOnNullKey: True, 
+                    hasNullKey: hasNullKey2);
+                !(hasNullKey2) ? entry2 != default(InternalEntityEntry) ? 
+                {
+                    entityType2 = entry2.EntityType;
+                    return instance2 = (User)entry2.Entity;
+                } : 
+                {
+                    ISnapshot shadowSnapshot2;
+                    shadowSnapshot2 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                    entityType2 = [LIFTABLE Constant: EntityType: User | Resolver: namelessParameter{4} => namelessParameter{4}.Dependencies.Model.FindEntityType("AuthApi.Models.User")];
+                    instance2 = switch (entityType2)
+                    {
+                        case [LIFTABLE Constant: EntityType: User | Resolver: namelessParameter{5} => namelessParameter{5}.Dependencies.Model.FindEntityType("AuthApi.Models.User")]: 
+                            {
+                                return 
+                                {
+                                    User instance;
+                                    instance = new User();
+                                    instance.<Id>k__BackingField = dataReader.GetInt32(7);
+                                    instance.<IsBlocked>k__BackingField = dataReader.GetBoolean(8);
+                                    instance.<PasswordHash>k__BackingField = (byte[])dataReader.GetFieldValue<object>(9);
+                                    instance.<PasswordSalt>k__BackingField = (byte[])dataReader.GetFieldValue<object>(10);
+                                    instance.<Role>k__BackingField = (string)dataReader.GetFieldValue<object>(11);
+                                    instance.<Username>k__BackingField = (string)dataReader.GetFieldValue<object>(12);
+                                    (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                        context: materializationContext2.Context, 
+                                        entity: instance, 
+                                        queryTrackingBehavior: TrackAll, 
+                                        structuralType: [LIFTABLE Constant: EntityType: User | Resolver: namelessParameter{6} => namelessParameter{6}.Dependencies.Model.FindEntityType("AuthApi.Models.User")]) : default(void);
+                                    return instance;
+                                }}
+                        default: 
+                            default(User)
+                    }
+                    ;
+                    entry2 = entityType2 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                        entityType: entityType2, 
+                        entity: instance2, 
+                        snapshot: shadowSnapshot2);
+                    return instance2;
+                } : default(void);
+                return instance2;
+            };
+            ShaperProcessingExpressionVisitor.IncludeReference<RefreshToken, RefreshToken, User>(
+                queryContext: queryContext, 
+                entity: entity, 
+                relatedEntity: entity, 
+                navigation: [LIFTABLE Constant: Navigation: RefreshToken.User (User) ToPrincipal User Inverse: RefreshTokens | Resolver: namelessParameter{7} => namelessParameter{7}.Dependencies.Model.FindEntityType("AuthApi.Models.RefreshToken").FindNavigation("User")], 
+                inverseNavigation: [LIFTABLE Constant: Navigation: User.RefreshTokens (List<RefreshToken>) Collection ToDependent RefreshToken Inverse: User | Resolver: namelessParameter{8} => namelessParameter{8}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindNavigation("RefreshTokens")], 
+                fixup: (namelessParameter{9}, namelessParameter{10}) => 
+                {
+                    namelessParameter{9}.<User>k__BackingField = namelessParameter{10};
+                    return [LIFTABLE Constant: ClrICollectionAccessor<User, List<RefreshToken>, RefreshToken> | Resolver: namelessParameter{11} => namelessParameter{11}.Dependencies.Model.FindEntityType("AuthApi.Models.User").FindNavigation("RefreshTokens").GetCollectionAccessor()].Add(
+                        entity: namelessParameter{10}, 
+                        value: namelessParameter{9}, 
+                        forMaterialization: True);
+                }, 
+                trackingQuery: True);
+            return entity;
+        }, 
+        contextType: AuthApi.Data.DataContext, 
+        standAloneStateManager: False, 
+        detailedErrorsEnabled: False, 
+        threadSafetyChecksEnabled: True), 
+    cancellationToken: queryContext.CancellationToken)'
+2025-07-08 02:39:27.213 +02:00 [DBG] Creating DbConnection.
+2025-07-08 02:39:27.241 +02:00 [DBG] Created DbConnection. (23ms).
+2025-07-08 02:39:27.250 +02:00 [DBG] Opening connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:39:27.577 +02:00 [DBG] Opened connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:39:27.589 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-07-08 02:39:27.609 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (15ms).
+2025-07-08 02:39:27.625 +02:00 [DBG] Initialized DbCommand for 'ExecuteReader' (36ms).
+2025-07-08 02:39:27.645 +02:00 [DBG] Executing DbCommand [Parameters=[@__token_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[Created], [r].[Expires], [r].[Revoked], [r].[RevokedByIp], [r].[Token], [r].[UserId], [u].[Id], [u].[IsBlocked], [u].[PasswordHash], [u].[PasswordSalt], [u].[Role], [u].[Username]
+FROM [RefreshTokens] AS [r]
+INNER JOIN [Users] AS [u] ON [r].[UserId] = [u].[Id]
+WHERE [r].[Token] = @__token_0
+2025-07-08 02:39:27.738 +02:00 [INF] Executed DbCommand (95ms) [Parameters=[@__token_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[Created], [r].[Expires], [r].[Revoked], [r].[RevokedByIp], [r].[Token], [r].[UserId], [u].[Id], [u].[IsBlocked], [u].[PasswordHash], [u].[PasswordSalt], [u].[Role], [u].[Username]
+FROM [RefreshTokens] AS [r]
+INNER JOIN [Users] AS [u] ON [r].[UserId] = [u].[Id]
+WHERE [r].[Token] = @__token_0
+2025-07-08 02:39:27.812 +02:00 [DBG] Context 'DataContext' started tracking 'RefreshToken' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:39:27.857 +02:00 [DBG] The navigation 'RefreshToken.User' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:39:27.871 +02:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-08 02:39:27.907 +02:00 [DBG] Closing data reader to 'AuthDb' on server 'machine'.
+2025-07-08 02:39:27.918 +02:00 [DBG] A data reader for 'AuthDb' on server 'machine' is being disposed after spending 130ms reading results.
+2025-07-08 02:39:27.932 +02:00 [DBG] Closing connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:39:27.943 +02:00 [DBG] Closed connection to database 'AuthDb' on server 'machine' (11ms).
+2025-07-08 02:39:34.703 +02:00 [INF] Executed action AuthApi.Controllers.AuthController.Refresh (AuthApi) in 10467.7873ms
+2025-07-08 02:39:34.709 +02:00 [INF] Executed endpoint 'AuthApi.Controllers.AuthController.Refresh (AuthApi)'
+2025-07-08 02:39:34.980 +02:00 [WRN] Refresh token expired for /api/auth/refresh
+AuthApi.Exceptions.RefreshTokenExpiredException: Refresh token has expired.
+   at AuthApi.Services.Implementations.AuthService.RefreshTokenAsync(String token, String ipAddress) in C:\Projects\.net-core_API-Authentication\AuthApi\Services\Implementations\AuthService.cs:line 60
+   at AuthApi.Controllers.AuthController.Refresh(RefreshRequest request) in C:\Projects\.net-core_API-Authentication\AuthApi\Controllers\AuthController.cs:line 46
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_6>d.MoveNext() in C:\Projects\.net-core_API-Authentication\AuthApi\Program.cs:line 163
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AuthApi.Middlewares.ExceptionLoggingMiddleware.InvokeAsync(HttpContext context) in C:\Projects\.net-core_API-Authentication\AuthApi\Middlewares\ExceptionLoggingMiddleware.cs:line 21
+2025-07-08 02:39:35.055 +02:00 [INF] HTTP POST /api/auth/refresh responded 400 in 13812.3962 ms
+2025-07-08 02:39:35.070 +02:00 [DBG] Connection id "0HNDTMV9TT4F4" completed keep alive response.
+2025-07-08 02:39:35.075 +02:00 [DBG] 'DataContext' disposed.
+2025-07-08 02:39:35.087 +02:00 [DBG] Disposing connection to database 'AuthDb' on server 'machine'.
+2025-07-08 02:39:35.094 +02:00 [DBG] Disposed connection to database '' on server '' (6ms).
+2025-07-08 02:39:35.101 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7010/api/auth/refresh - 400 null application/json; charset=utf-8 13953.3585ms
+2025-07-08 02:40:00.943 +02:00 [DBG] Connection id "0HNDTMV9TT4F4" reset.
+2025-07-08 02:40:00.984 +02:00 [DBG] Connection id "0HNDTMV9TT4F4" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-08 02:40:01.005 +02:00 [DBG] Connection id "0HNDTMV9TT4F4" disconnecting.
+2025-07-08 02:40:01.018 +02:00 [DBG] Connection id "0HNDTMV9TT4F4" stopped.

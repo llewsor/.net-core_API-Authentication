@@ -12,7 +12,7 @@ namespace AuthApi.Services.Implementations
         IRefreshTokenRepository refreshRepo)
         : IAuthService
     {
-        public async Task<TokenDto> AuthenticateAsync(LoginDto dto, string ipAddress)
+        public async Task<TokenDto> AuthenticateAsync(LoginRequest dto, string ipAddress)
         {
             User? user = await userRepository.GetByUsernameAsync(dto.Username);
             if (user == null || !PasswordHelper.VerifyPasswordHash(dto.Password, user.PasswordHash, user.PasswordSalt))
@@ -35,7 +35,7 @@ namespace AuthApi.Services.Implementations
             return token;
         }
 
-        public async Task RegisterAsync(UserDto dto)
+        public async Task RegisterAsync(UserRequest dto)
         {
             User? current = userRepository.GetByUsernameAsync(dto.Username).Result;
             if (current != null)

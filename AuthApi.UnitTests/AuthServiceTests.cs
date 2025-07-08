@@ -22,6 +22,12 @@ public class AuthServiceTests
         _userRepo = new Mock<IUserRepository>();
         _refreshRepo = new Mock<IRefreshTokenRepository>();
         _tokenHelper = new Mock<ITokenHelper>();
+
+        _userRepo.Setup(x => x.AddAsync(It.IsAny<User>())).Returns(Task.CompletedTask);
+        _userRepo.Setup(x => x.SaveChangesAsync()).Returns(Task.CompletedTask);
+        _refreshRepo.Setup(x => x.AddAsync(It.IsAny<RefreshToken>())).Returns(Task.CompletedTask);
+        _refreshRepo.Setup(x => x.SaveChangesAsync()).Returns(Task.CompletedTask);
+
         _service = new AuthService(
             _userRepo.Object,
             _tokenHelper.Object,
@@ -47,9 +53,9 @@ public class AuthServiceTests
         };
     }
 
-    private LoginDto GivenLoginDto(string username, string password, out User user)
+    private LoginRequest GivenLoginDto(string username, string password, out User user)
     {
-        var dto = new LoginDto { Username = username, Password = password };
+        var dto = new LoginRequest { Username = username, Password = password };
         user = CreateTestUser(username, password);
         _userRepo.Setup(x => x.GetByUsernameAsync(username)).ReturnsAsync(user);
         return dto;
@@ -63,7 +69,7 @@ public class AuthServiceTests
     public async Task AuthenticateAsync_WithUnknownUsername_ShouldThrowInvalidCredentialsException()
     {
         // Arrange
-        var dto = new LoginDto { Username = "noone", Password = "pwd" };
+        var dto = new LoginRequest { Username = "noone", Password = "pwd" };
         _userRepo.Setup(r => r.GetByUsernameAsync(dto.Username))
                  .ReturnsAsync((User?)null);
 
@@ -93,7 +99,7 @@ public class AuthServiceTests
     public async Task AuthenticateAsync_WithBlockedUser_ShouldThrowUserBlockedException()
     {
         // Arrange
-        var dto = new LoginDto { Username = "noone", Password = "pwd" };
+        var dto = new LoginRequest { Username = "noone", Password = "pwd" };
         var user = CreateTestUser(dto.Username, dto.Password);
         user.IsBlocked = true; // Simulate blocked user
 
@@ -148,19 +154,11 @@ public class AuthServiceTests
     public async Task RegisterAsync_WithValidUserDto_ShouldAddUserAndSaveChanges(string username, string password)
     {
         // Arrange
-        var dto = new UserDto
+        var dto = new UserRequest
         {
             Username = username,
             Password = password
         };
-
-        _userRepo
-          .Setup(x => x.AddAsync(It.IsAny<User>()))
-          .Returns(Task.CompletedTask);
-
-        _userRepo
-          .Setup(x => x.SaveChangesAsync())
-          .Returns(Task.CompletedTask);
 
         // Act
         await _service.RegisterAsync(dto);
@@ -178,7 +176,7 @@ public class AuthServiceTests
     public async Task RegisterAsync_WithAlreadyUsernameUsed_ShouldThrowAlreadyRegisteredException()
     {
         // Arrange
-        var dto = new UserDto() { Username = "alice", Password = "P@ssw0rd" };
+        var dto = new UserRequest() { Username = "alice", Password = "P@ssw0rd" };
 
         GivenLoginDto(dto.Username, dto.Password, out var _);
 

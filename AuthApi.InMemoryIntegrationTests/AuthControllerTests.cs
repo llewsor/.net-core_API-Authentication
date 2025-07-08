@@ -26,7 +26,7 @@ namespace AuthApi.InMemoryIntegrationTests
         public async Task Register_ValidUser_ReturnsOk()
         {
             // Arrange
-            var userDto = new UserDto { Username = "test@example.com", Password = "Password123!" };
+            var userDto = new UserRequest { Username = "test@example.com", Password = "Password123!" };
 
             // Act
             var response = await _client.PostAsJsonAsync("/api/Auth/register", userDto);
@@ -40,7 +40,7 @@ namespace AuthApi.InMemoryIntegrationTests
         public async Task Register_DuplicateUser_ReturnsBadRequest()
         {
             // Arrange
-            var userDto = new UserDto { Username = "duplicate@example.com", Password = "Password123!" };
+            var userDto = new UserRequest { Username = "duplicate@example.com", Password = "Password123!" };
             var response1 = await _client.PostAsJsonAsync("/api/Auth/register", userDto); // Register first time
 
             // Act
@@ -64,7 +64,7 @@ namespace AuthApi.InMemoryIntegrationTests
                 await RegisterUserAsync(email, password); // Ensure user exists for successful login
             }
 
-            var loginDto = new LoginDto { Username = email, Password = password };
+            var loginDto = new LoginRequest { Username = email, Password = password };
 
             // Act
             var response = await _client.PostAsJsonAsync("/api/Auth/login", loginDto);
@@ -93,7 +93,7 @@ namespace AuthApi.InMemoryIntegrationTests
             var userEmail = "refresh_user@example.com";
             var userPassword = "Password123!";
             await RegisterUserAsync(userEmail, userPassword);
-            var loginResponse = await _client.PostAsJsonAsync("/api/Auth/login", new LoginDto { Username = userEmail, Password = userPassword });
+            var loginResponse = await _client.PostAsJsonAsync("/api/Auth/login", new LoginRequest { Username = userEmail, Password = userPassword });
             var initialTokens = await loginResponse.Content.ReadFromJsonAsync<TokenDto>();
             initialTokens.Should().NotBeNull();
 
@@ -141,7 +141,7 @@ namespace AuthApi.InMemoryIntegrationTests
             var userEmail = "secret_user@example.com";
             var userPassword = "Password123!";
             await RegisterUserAsync(userEmail, userPassword);
-            var loginResponse = await _client.PostAsJsonAsync("/api/Auth/login", new LoginDto { Username = userEmail, Password = userPassword });
+            var loginResponse = await _client.PostAsJsonAsync("/api/Auth/login", new LoginRequest { Username = userEmail, Password = userPassword });
             var tokens = await loginResponse.Content.ReadFromJsonAsync<TokenDto>();
             tokens.Should().NotBeNull();
 
@@ -197,7 +197,7 @@ namespace AuthApi.InMemoryIntegrationTests
             }
 
             // Log in as admin to get token
-            var loginResponse = await _client.PostAsJsonAsync("/api/Auth/login", new LoginDto { Username = adminUserEmail, Password = adminUserPassword });
+            var loginResponse = await _client.PostAsJsonAsync("/api/Auth/login", new LoginRequest { Username = adminUserEmail, Password = adminUserPassword });
             var tokens = await loginResponse.Content.ReadFromJsonAsync<TokenDto>();
             tokens.Should().NotBeNull();
 
@@ -222,7 +222,7 @@ namespace AuthApi.InMemoryIntegrationTests
             var regularUserPassword = "Password123!";
             await RegisterUserAsync(regularUserEmail, regularUserPassword); // Default role is "User"
 
-            var loginResponse = await _client.PostAsJsonAsync("/api/Auth/login", new LoginDto { Username = regularUserEmail, Password = regularUserPassword });
+            var loginResponse = await _client.PostAsJsonAsync("/api/Auth/login", new LoginRequest { Username = regularUserEmail, Password = regularUserPassword });
             var tokens = await loginResponse.Content.ReadFromJsonAsync<TokenDto>();
             tokens.Should().NotBeNull();
 
@@ -252,7 +252,7 @@ namespace AuthApi.InMemoryIntegrationTests
         // Helper method to register a user
         private async Task RegisterUserAsync(string email, string password)
         {
-            var userDto = new UserDto { Username = email, Password = password };
+            var userDto = new UserRequest { Username = email, Password = password };
             var response = await _client.PostAsJsonAsync("/api/Auth/register", userDto);
             response.EnsureSuccessStatusCode(); // Throws exception on non-success status
         }

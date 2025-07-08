@@ -1,6 +1,46 @@
-@AuthApi_HostAddress = http://localhost:5184
+@AuthApi_HostAddress = https://localhost:7010
+@Token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdHVzZXIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwianRpIjoiMjZmNjdhNWMtZTkwNS00ZTgyLWI3NTYtMTg0MTNmZThiYjkxIiwibmJmIjoxNzUxOTM0NzQzLCJleHAiOjE3NTE5MzU2NDMsImlzcyI6IkF1dGhBcGkiLCJhdWQiOiJBdXRoQXBpQ2xpZW50cyJ9.NCI5fEmYGpANc51x4VYQwsMBJKaIX6YdQGQOVnpJD58rd67xGBiMonn2U50mrtvQeiS6VylOLRvfUMxtt8KiVw
+@RefreshToken = i46yOIJjh9PjG0x3nGjewfIKJV5RCMKcio/B4SeajUYscvjqG3tEU0JK1cDpONieI/zPjbuc1UjS5QvRfcx3Qw==
 
-GET {{AuthApi_HostAddress}}/weatherforecast/
+###
+
+POST {{AuthApi_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "Pa$$w0rd!"
+}
+
+###
+
+POST {{AuthApi_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "Pa$$w0rd!"
+}
+
+###
+
+POST {{AuthApi_HostAddress}}/api/auth/refresh
+Content-Type: application/json
+
+{
+  "refreshToken": "{{RefreshToken}}"
+}
+
+###
+
+GET {{AuthApi_HostAddress}}/api/auth/secret
+Authorization: Bearer {{Token}}
+Accept: application/json
+
+###
+
+GET {{AuthApi_HostAddress}}/api/auth/admin-data
+Authorization: Bearer {{Token}}
 Accept: application/json
 
 ###

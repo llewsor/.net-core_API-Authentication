@@ -21,19 +21,19 @@ namespace AuthApi.Controllers
         [HttpPost("register")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> Register(UserDto dto)
+        public async Task<IActionResult> Register(UserRequest request)
         {
-            await _authService.RegisterAsync(dto);
+            await _authService.RegisterAsync(request);
             return Created();
         }
 
         [HttpPost("login")]
         [ProducesResponseType(typeof(TokenDto), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> Login(LoginDto dto)
+        public async Task<IActionResult> Login(LoginRequest request)
         {
             var ip = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "Unknown";
-            TokenDto token = await _authService.AuthenticateAsync(dto, ip);
+            TokenDto token = await _authService.AuthenticateAsync(request, ip);
             return Ok(token);
         }
 
